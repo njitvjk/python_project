@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>restaurant.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #629755; font-style: italic;}
+.s3 { color: #808080;}
+.s4 { color: #6a8759;}
+.s5 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+restaurant.py</font>
+</center></td></tr></table>
+<pre><span class="s0">class </span><span class="s1">Restaurant:</span>
+    <span class="s2">&quot;&quot;&quot;A simple method to represent a Car&quot;&quot;&quot;</span>
+
+    <span class="s0">def </span><span class="s1">__init__(self</span><span class="s0">, </span><span class="s1">name</span><span class="s0">, </span><span class="s1">cuisine_type</span><span class="s0">, </span><span class="s1">location):</span>
+        <span class="s2">&quot;&quot;&quot;Initialize attributes to describe a restaurant &quot;&quot;&quot;</span>
+        <span class="s3"># data members (instance variables)</span>
+        <span class="s1">print(</span><span class="s4">'Inside Constructor'</span><span class="s1">)</span>
+        <span class="s1">self.restaurant_name = name</span>
+        <span class="s1">self.cuisine_type = cuisine_type</span>
+        <span class="s1">self.restaurant_location = location</span>
+        <span class="s3"># setting a default value for attribute</span>
+        <span class="s1">self.restaurant_rating = </span><span class="s5">0</span>
+        <span class="s1">print(</span><span class="s4">'All variables initialized'</span><span class="s1">)</span>
+
+    <span class="s3"># Behavior (instance methods)</span>
+    <span class="s0">def </span><span class="s1">get_descriptive_name(self):</span>
+
+        <span class="s2">&quot;&quot;&quot;Return a neatly formatted descriptive name &quot;&quot;&quot;</span>
+        <span class="s1">long_name = </span><span class="s4">f&quot;</span><span class="s0">{</span><span class="s1">self.restaurant_name</span><span class="s0">} {</span><span class="s1">self.cuisine_type</span><span class="s0">} {</span><span class="s1">self.restaurant_location</span><span class="s0">} </span><span class="s4">&quot;</span>
+        <span class="s0">return </span><span class="s1">long_name.title()</span>
+
+    <span class="s3"># Behavior (instance methods)</span>
+    <span class="s0">def </span><span class="s1">read_restaurant_rating(self):</span>
+        <span class="s2">&quot;&quot;&quot;Print a statement showing car mileage&quot;&quot;&quot;</span>
+        <span class="s1">print(</span><span class="s4">f&quot;This restaurant has rating </span><span class="s0">{</span><span class="s1">self.restaurant_rating</span><span class="s0">} </span><span class="s4">&quot;</span><span class="s1">)</span>
+
+    <span class="s0">def </span><span class="s1">update_restaurant_rating(self</span><span class="s0">, </span><span class="s1">rating):</span>
+        <span class="s2">&quot;&quot;&quot;modifying an attribute's value through method&quot;&quot;&quot;</span>
+        <span class="s1">self.restaurant_rating = </span><span class="s5">4</span>
+
+
+<span class="s3"># Make an instance and call method of class</span>
+<span class="s3"># create object of a class</span>
+<span class="s1">restaurant = Restaurant(</span><span class="s4">'SPICES'</span><span class="s0">, </span><span class="s4">'Indian_cuisine'</span><span class="s0">, </span><span class="s4">'Jersey City'</span><span class="s1">)</span>
+<span class="s1">print(restaurant.get_descriptive_name())</span>
+
+<span class="s3"># Call rating</span>
+<span class="s1">restaurant.read_restaurant_rating()</span>
+
+<span class="s3"># Update rating</span>
+<span class="s1">restaurant.update_restaurant_rating(</span><span class="s5">5</span><span class="s1">)</span>
+<span class="s1">restaurant.read_restaurant_rating()</span>
+
+<span class="s3"># Set an attribute</span>
+<span class="s1">restaurant.restaurant_rating = </span><span class="s5">5</span>
+<span class="s1">restaurant.read_restaurant_rating()</span>
+</pre>
+</body>
+</html>
