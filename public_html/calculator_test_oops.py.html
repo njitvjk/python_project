@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>calculator_test.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #629755; font-style: italic;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #cc7832;}
+.s3 { color: #6897bb;}
+.s4 { color: #808080;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+calculator_test.py</font>
+</center></td></tr></table>
+<pre><span class="s0">&quot;&quot;&quot;Testing the Arithematic operations&quot;&quot;&quot;</span>
+<span class="s2">import </span><span class="s1">pytest</span>
+
+<span class="s2">from </span><span class="s1">calculator.calculator </span><span class="s2">import </span><span class="s1">Calculator</span>
+<span class="s2">from </span><span class="s1">operations.calculator_history </span><span class="s2">import </span><span class="s1">CalculationHistory</span>
+
+
+<span class="s1">@pytest.fixture</span>
+<span class="s2">def </span><span class="s1">clear_history():</span>
+    <span class="s0">&quot;&quot;&quot;fixture function to run before every functions defined below&quot;&quot;&quot;</span>
+    <span class="s1">CalculationHistory.clear_history()</span>
+
+
+<span class="s2">def </span><span class="s1">test_001_add_to_history(clear_history):</span>
+    <span class="s0">&quot;&quot;&quot;Case1 :Add calculation to history&quot;&quot;&quot;</span>
+    <span class="s1">Calculator.add_numbers(</span><span class="s3">1</span><span class="s2">, </span><span class="s3">2</span><span class="s1">)</span>
+    <span class="s1">Calculator.divide_numbers(</span><span class="s3">5</span><span class="s2">, </span><span class="s3">1</span><span class="s1">)</span>
+    <span class="s2">assert </span><span class="s1">CalculationHistory.history_count() == </span><span class="s3">2</span>
+    <span class="s2">assert </span><span class="s1">CalculationHistory.get_history() == </span><span class="s3">5</span>
+
+
+<span class="s2">def </span><span class="s1">test_002_add_values(clear_history):</span>
+    <span class="s0">&quot;&quot;&quot;Case1:Add two numbers&quot;&quot;&quot;</span>
+    <span class="s4"># pylint: disable=unused-argument,redefined-outer-name</span>
+    <span class="s2">assert </span><span class="s1">Calculator.add_numbers(</span><span class="s3">1</span><span class="s2">, </span><span class="s3">2</span><span class="s1">) == </span><span class="s3">3</span>
+    <span class="s2">assert </span><span class="s1">Calculator.add_numbers(</span><span class="s3">2</span><span class="s2">, </span><span class="s3">2</span><span class="s1">) == </span><span class="s3">4</span>
+    <span class="s2">assert </span><span class="s1">Calculator.add_numbers_three_arguments(</span><span class="s3">3</span><span class="s2">, </span><span class="s3">2</span><span class="s2">, </span><span class="s3">1</span><span class="s1">) == </span><span class="s3">6</span>
+    <span class="s2">assert </span><span class="s1">Calculator.add_numbers_three_arguments(</span><span class="s3">4</span><span class="s2">, </span><span class="s3">2</span><span class="s2">, </span><span class="s3">1</span><span class="s1">) == </span><span class="s3">7</span>
+
+
+<span class="s2">def </span><span class="s1">test_003_clear_history(clear_history):</span>
+    <span class="s0">&quot;&quot;&quot;Case2:clear history&quot;&quot;&quot;</span>
+    <span class="s4"># pylint: disable=unused-argument,redefined-outer-name</span>
+    <span class="s2">assert </span><span class="s1">Calculator.add_numbers(</span><span class="s3">1</span><span class="s2">, </span><span class="s3">2</span><span class="s1">) == </span><span class="s3">3</span>
+    <span class="s2">assert </span><span class="s1">Calculator.add_numbers(</span><span class="s3">2</span><span class="s2">, </span><span class="s3">2</span><span class="s1">) == </span><span class="s3">4</span>
+    <span class="s2">assert </span><span class="s1">Calculator.add_numbers(</span><span class="s3">3</span><span class="s2">, </span><span class="s3">2</span><span class="s1">) == </span><span class="s3">5</span>
+    <span class="s2">assert </span><span class="s1">Calculator.add_numbers(</span><span class="s3">4</span><span class="s2">, </span><span class="s3">2</span><span class="s1">) == </span><span class="s3">6</span>
+    <span class="s2">assert </span><span class="s1">CalculationHistory.history_count() == </span><span class="s3">4</span>
+    <span class="s2">assert </span><span class="s1">CalculationHistory.clear_history() </span><span class="s2">is True</span>
+    <span class="s2">assert </span><span class="s1">CalculationHistory.history_count() == </span><span class="s3">0</span>
+
+
+<span class="s2">def </span><span class="s1">test_004_count_history(clear_history):</span>
+    <span class="s0">&quot;&quot;&quot;Case3:Count history&quot;&quot;&quot;</span>
+    <span class="s4"># pylint: disable=unused-argument,redefined-outer-name</span>
+    <span class="s2">assert </span><span class="s1">CalculationHistory.history_count() == </span><span class="s3">0</span>
+    <span class="s2">assert </span><span class="s1">Calculator.add_numbers(</span><span class="s3">2</span><span class="s2">, </span><span class="s3">2</span><span class="s1">) == </span><span class="s3">4</span>
+    <span class="s2">assert </span><span class="s1">Calculator.add_numbers(</span><span class="s3">3</span><span class="s2">, </span><span class="s3">2</span><span class="s1">) == </span><span class="s3">5</span>
+    <span class="s2">assert </span><span class="s1">CalculationHistory.history_count() == </span><span class="s3">2</span>
+
+
+<span class="s2">def </span><span class="s1">test_005_get_first_result(clear_history):</span>
+    <span class="s0">&quot;&quot;&quot;Case5: get first result&quot;&quot;&quot;</span>
+    <span class="s4"># pylint: disable=unused-argument,redefined-outer-name</span>
+    <span class="s2">assert </span><span class="s1">Calculator.add_numbers(</span><span class="s3">2</span><span class="s2">, </span><span class="s3">2</span><span class="s1">) == </span><span class="s3">4</span>
+    <span class="s2">assert </span><span class="s1">Calculator.add_numbers(</span><span class="s3">3</span><span class="s2">, </span><span class="s3">2</span><span class="s1">) == </span><span class="s3">5</span>
+    <span class="s2">assert </span><span class="s1">CalculationHistory.get_result_of_first_calculation() == </span><span class="s3">4</span>
+
+
+<span class="s2">def </span><span class="s1">test_006_subtraction_values(clear_history):</span>
+    <span class="s0">&quot;&quot;&quot;Case6:test subtraction&quot;&quot;&quot;</span>
+    <span class="s4"># pylint: disable=unused-argument,redefined-outer-name</span>
+    <span class="s2">assert </span><span class="s1">Calculator.subtract_number(</span><span class="s3">1</span><span class="s2">, </span><span class="s3">2</span><span class="s1">) == -</span><span class="s3">1</span>
+
+
+<span class="s2">def </span><span class="s1">test_007_multiplication_values(clear_history):</span>
+    <span class="s0">&quot;&quot;&quot; Case7 :multiplication of two numbers&quot;&quot;&quot;</span>
+    <span class="s4"># pylint: disable=unused-argument,redefined-outer-name</span>
+    <span class="s2">assert </span><span class="s1">Calculator.multiply_numbers(</span><span class="s3">1</span><span class="s2">, </span><span class="s3">2</span><span class="s1">) == </span><span class="s3">2</span>
+
+
+<span class="s2">def </span><span class="s1">test_008_division_values(clear_history):</span>
+    <span class="s0">&quot;&quot;&quot;Case9 :Division&quot;&quot;&quot;</span>
+    <span class="s4"># pylint: disable=unused-argument,redefined-outer-name</span>
+    <span class="s2">assert </span><span class="s1">Calculator.divide_numbers(</span><span class="s3">2</span><span class="s2">, </span><span class="s3">2</span><span class="s1">) == </span><span class="s3">1</span>
+
+
+<span class="s2">def </span><span class="s1">test_009_get_history(clear_history):</span>
+    <span class="s0">&quot;&quot;&quot;Case10 :get history returns the last calculation result&quot;&quot;&quot;</span>
+    <span class="s4"># pylint: disable=unused-argument,redefined-outer-name</span>
+    <span class="s1">Calculator.add_numbers(</span><span class="s3">2</span><span class="s2">, </span><span class="s3">2</span><span class="s1">)</span>
+    <span class="s1">Calculator.divide_numbers(</span><span class="s3">2</span><span class="s2">, </span><span class="s3">2</span><span class="s1">)</span>
+    <span class="s2">assert </span><span class="s1">CalculationHistory.get_history() == </span><span class="s3">1</span>
+
+
+<span class="s2">def </span><span class="s1">test_010_get_last_result(clear_history):</span>
+    <span class="s0">&quot;&quot;&quot;Case5: get first result&quot;&quot;&quot;</span>
+    <span class="s4"># pylint: disable=unused-argument,redefined-outer-name</span>
+    <span class="s2">assert </span><span class="s1">Calculator.add_numbers(</span><span class="s3">2</span><span class="s2">, </span><span class="s3">2</span><span class="s1">) == </span><span class="s3">4</span>
+    <span class="s2">assert </span><span class="s1">Calculator.add_numbers(</span><span class="s3">3</span><span class="s2">, </span><span class="s3">2</span><span class="s1">) == </span><span class="s3">5</span>
+    <span class="s2">assert </span><span class="s1">CalculationHistory.get_result_of_first_calculation() == </span><span class="s3">4</span>
+</pre>
+</body>
+</html>
