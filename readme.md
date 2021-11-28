@@ -1,17 +1,18 @@
-# History of Internet
+#Python_crash course
 
 
-### Project Group
-Kowsalya Vijayan
-Sandeepa Jaladi
-Sabina Hack 
 ### Pages
-1. HomePage, Interne History , Browser Wars ( Click  CTA-"Learn More" to access Browserwar2 Web Page), ecommerce , search engine, social networking, Internet Element ( Click CTA " ICANN& W3C" to access Internet element Page 2)
-2. Click Logo on each page to move back to home Page
-3. Click W3C icon on the footer to check validation results.
+1. HomePage,<br/>
+2. Python Basics<br/>
+3. OOPS 
+4. PYLINT
+5. TESTING ( Sub pages available under Additional Reading- 1.Pytest& coverage 2.Continuous Integration-CI)
+6. SOLID
+7. GLOSSARY (Sub Page availabe under Additional Reading- Design Patterns,Facdae and Factory)
 
+All subpages links are present under "Additional Reading" in Webpages
 
-### Comments about the work share and pages and our idea on layout structure in the below link 
+### Please use this link to see project comments
 
 [Project1_Comments](https://docs.google.com/presentation/d/1VaDuj4cHJY3opp3nv8CglN-cpJQk047i/edit?usp=sharing&ouid=113074241322915041477&rtpof=true&sd=true)
 
@@ -19,5 +20,5 @@ Sabina Hack
 
 ### Link to the project hosted in the azure cloud
 
-[History of Internet](http://internetinventionhistory.eastus.azurecontainer.io/)
+[PythonProgramming_websitelink](http://pythonprogramming.eastus.azurecontainer.io/index.html)
 
