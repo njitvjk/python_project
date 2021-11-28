@@ -36,11 +36,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <!--                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">HOME</a></li>-->
-                <li class="nav-item"><a class="nav-link" href="history.html">BASICS</a></li>
-                <li class="nav-item"><a class="nav-link" href="browserwars1.html">OOPS</a></li>
-                <li class="nav-item"><a class="nav-link" href="ecommerce.html">TESTING</a></li>
-                <li class="nav-item"><a class="nav-link" href="socialnetworking.html">SOLID</a></li>
-                <li class="nav-item"><a class="nav-link" href="socialnetworking.html">GLOSSARY</a></li>
+                <li class="nav-item"><a class="nav-link" href="basics.html">PYTHON BASICS</a></li>
+                <li class="nav-item"><a class="nav-link" href="OOPS.html">OOPS</a></li>
+                <li class="nav-item"><a class="nav-link" href="testing.html">TESTING</a></li>
+                <li class="nav-item"><a class="nav-link" href="SOLID.html">SOLID</a></li>
+                <li class="nav-item"><a class="nav-link" href="glossary.html">GLOSSARY</a></li>
 <!--                <li class="nav-item"><a class="nav-link" href="searchengine.html"></a></li>-->
 <!--                <li class="nav-item"><a class="nav-link" href="testing.html">INTERNET ELEMENTS</a></li>-->
             </ul>
@@ -49,7 +49,7 @@
 </nav>
 <!-- Hero section-->
 <div class="container bg-grey mt-2">
-    <h5 class="display-6 text-center ">Unit tests detect changes that may break a design contract</h5>
+    <h5 class="display-6 text-center ">Python supports multiple assignments in one statement</h5>
     <!--  <p class="lead"></p>-->
 </div>
 
@@ -91,67 +91,83 @@
 
                         </div>
                         <p>reduce their complexity.The image above shows the five concepts of the SOLID principles.</p>
-                        <h6 class=text-muted><i>Single Responsibility</i></h6>
+                        <p>Let us demonstrate the principles using a calculator program</p>
+                        <h5 class=text-muted><i>Single Responsibility</i></h5>
                         <p> <i>"A class should do one thing and therefore it should have only a single reason to change"</i></p>
 
                         <ul style="padding-left:50px "><li><p><i>Testing</i>-A class with one responsibility will have fewer test cases.</p> </li>
 
                             <li><p><i>Lower coupling</i>-Less functionality in a single class will have fewer dependencies.</p></li>
-                            <li><p> <i>Builder</i>-n code.</p></li>
-                            <li><p><i>prototype</i>-lets you copy existing objects without making your code dependent on their classes.</p></li>
-                            <li><p><i>Singleton</i>-lets you ensure that a class has only one instance, while providing a global access point to this instance.</p></li>
+                            <li><p> <i>Organization</i>- – Smaller, well-organized classes are easier to search than monolithic ones.</p></li>
+
                         </ul>
+                        <p>In this code, illustrates the calculator program which can perform operations and store the results in history.However, this code violates the single responsibility principle. </p>
+
+                        <iframe src="source_code/Calculator_SOLID.py.html" class="targetframe" style="border: none" ;>
+                        </iframe>
+                        <p> to fix this let us move the all methods related to history to another class</p>
+                        <iframe src="source_code/calculator_history.py.html" class="targetframe" style="height:200px " ;>
+                        </iframe>
+                        <p>Awesome.Now we have relieved the <i>Calculator</i> class to perform only calculation and let <i>Calculator_history</i> take care of history.</i> </p>
+
+                        <h5 class=text-muted><i>Open for Extension and  closed for Modification </i></h5>
+                        <p><i>"classes should be open for extension but closed for modification. In doing so, we stop ourselves from modifying existing code and causing potential new bugs."</i></p>
+                        <p>Now, let us explore the concept with the calculator.I used the program for some days and later on, I felt that I need a logger to check the issues.If I add the function into the Calculator Class it changes the logic which is violation.</p>
+                        <p>To fix this, I implement a subclass <i>Calculator</i> which extends the <i>Calculator</i> and extends its functionality to implement logger.</p>
+                        <iframe src="source_code/calculator_logger.py.html" class="targetframe" style="height:200px " ;>
+                        </iframe>
+                        <p>Example shows how a addition operation has been captured in the log</p>
+                        <p>Output</p>
+                        <div class="code_section">
+
+                            <span class="p">The result of addition is  7</span><br>
+                            <span class = "o">2021-11-27 11:30:03,203 [INFO] addition successful</span>
+                        </div>
+                        <p></p>
+                        <h5 class=text-muted><i>Liskov Substitution Principle(LSP)</i></h5>
+                        <p><i>"If S is a subtype of T, then objects of type T in a program may be replaced with objects of type S without altering any of the desirable properties of that program."</i></p>
+                            <p>if class A is a subtype of class B, we should be able to replace B with A without disrupting the behavior of our program.This principle aims to enforce consistency so that the parent Class or its child Class can be used in the same way without any errors.</p>
+                            <p>When a child Class cannot perform the same actions as its parent Class, this can cause bugs.</p>
+                            <p>The child Class should be able to process the same requests and deliver the same result as the parent Class or it could deliver a result that is of the same type.</p>
+                            <p>If the child Class doesn’t meet these requirements, it means the child Class is changed completely and violates this principle.</p>
+                            <p> Demonstration:</p>
+                        <iframe src="source_code/Calculator_addition.py.html" class="targetframe" style="height:450px " ;>
+                        </iframe>
+                        <p>we are creating a subclass called <i>Calculator_Addition</i> to extend <i>Calculator</i>class. This class attempts to do addition with multiple numbers and another method to return float overriding the parent method which is a violation.In order to fix it,declare a new method.</p>
 
 
 
-                        <h6 class=text-muted><i>Structural Design Patterns:</i></h6>
-                        <ul style="padding-left:50px "><li><p>Structural patterns explain how to assemble objects and classes into larger structures while keeping these structures flexible and efficient.</p></li>
-                            <li><p><i>Bridge</i>-lets you split a large class or a set of closely related classes into two separate hierarchies—abstraction and implementation—which can be developed independently of each other.</p></li>
-                            <li><p><i>Composite</i>-lets you compose objects into tree structures and then work with these structures as if they were individual objects.</p></li>
-                            <li><p><i>Decorator</i>-lets you attach new behaviors to objects by placing these objects inside special wrapper objects that contain the behaviors.</p></li>
-                            <li><p><i>Facade</i>-provides a simplified interface to a library, a framework, or any other complex set of classes.</p></li>
-                            <li><p><i>Flyweight</i>-lets you fit more objects into the available amount of RAM by sharing common parts of state between multiple objects instead of keeping all of the data in each object.</p></li>
-                            <li><p><i>Proxy</i>-lets you provide a substitute or placeholder for another object. A proxy controls access to the original object, allowing you to perform something either before or after the request gets through to the original object.</p></li>
+                        <h5 class=text-muted><i>Interface Segregation </i></h5>
+                        <p><i>"larger interfaces should be split into smaller ones. By doing so, we can ensure that implementing classes only need to be concerned about the methods that are of interest to them.in other words, A client should not depend on methods it does not use"</i></p>
+                        <p> The calculator program can be used by different roles like students and general people. Students might also do trignometric functions where as general people will only need addition /subtraction/division or multiplication.Our program has all functionalities together and some unwanted functions for different actors.
 
-                            </ul>
+                        This is violation of the principle. Not let us split the program into two one for student and other for general people</p>
 
-                        <h6 class=text-muted><i>Behavioral Design Patterns:</i></h6>
-                        <ul style="padding-left:50px "><li><p>Behavioral design patterns are concerned with algorithms and the assignment of responsibilities between objects.</p></li>
-                            <li><p><i>Chain of Responsibility</i>- lets you pass requests along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain.</p></li>
-                            <li><p><i>Command</i>-turns a request into a stand-alone object that contains all information about the request. This transformation lets you pass requests as a method arguments, delay or queue a request’s execution, and support undoable operations.</p></li>
-                            <li><p><i>Iterator</i>-lets you traverse elements of a collection without exposing its underlying representation (list, stack, tree, etc.).</p></li>
-                            <li><p><i>Mediator</i>- lets you reduce chaotic dependencies between objects. The pattern restricts direct communications between the objects and forces them to collaborate only via a mediator object.</p></li>
-                            <li><p><i>Memento</i>-lets you save and restore the previous state of an object without revealing the details of its implementation.</p></li>
-                            <li><p><i>Observer</i>-lets you define a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing.</p></li>
-                            <li><p><i>State</i>-lets an object alter its behavior when its internal state changes. It appears as if the object changed its class.</p></li>
-                            <li><p><i>Strategy</i>-lets you define a family of algorithms, put each of them into a separate class, and make their objects interchangeable.</p></li>
-                            <li><p><i>Template Method</i>- defines the skeleton of an algorithm in the superclass but lets subclasses override specific steps of the algorithm without changing its structure.</p></li>
-                            <li><p><i>Visitor</i>- lets you separate algorithms from the objects on which they operate.</p></li></ul>
 
-                        <h6 ><i>Detailed Explanation</i></h6>
-                        <p> We are now going to pick two topics: <b>Factory</b> and <b>Facade</b> Method and let us see its details.</p>
-                        <h6 class=text-muted><i>Factory Method</i></h6>
-                        <p>Factory Method is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.</p>
+                        <iframe src="source_code/common_calculator.py.html" class="targetframe" style="height:400px" ;>
+                        </iframe>
+                        <p>The school calculator extends basic methods <i> addition, division,subtraction,multiplication</i>  and have trigonometric methods extended from inbuilt Python Class </p>
+                        <iframe src="source_code/school_calculator.py.html" class="targetframe" style="height:200px" ;>
+                        </iframe>
+                        <p></p>
+                        <h5 class=text-muted><i>Dependency Inversion</i></h5>
+                        <p><i>"The principle of dependency inversion refers to the decoupling of software modules. This way, instead of high-level modules depending on low-level modules, Both will depend on abstractions."</i></p>
+                        <p> Now we have two Class <i>CommonCalculator</i> and a <i>SchoolCalculator</i>Both classes use abstraction for adding the result to history as per rule,in this way both will not be dependent on each other</p>
 
-                            <img class="img-fluid rounded mb-2 " src="assets/glossary/structure.png" alt="..." />
-                            <p><li>The <i>Product</i> declares the interface, which is common to all objects that can be produced by the creator and its subclasses.</li>
-                            <li><i>Concrete Products</i> are different implementations of the product interface.</li>
-                            <li>The<i> Creator</i> class declares the factory method that returns new product objects. It’s important that the return type of this method matches the product interface.</li>
-                            <li><i>Concrete Creators</i> override the base factory method so it returns a different type of product.</li>
-
-                            The factory method doesn’t have to create new instances all the time. It can also return existing objects from a cache, an object pool, or another source.</p>
-
-                        <h6 class=text-muted><i>Facade </i></h6>
-                        <p>Facade is a structural design pattern that provides a simplified interface to a library, a framework, or any other complex set of classes.A facade is a class that provides a simple interface to a complex subsystem which contains lots of moving parts. A facade might provide limited functionality in comparison to working with the subsystem directly. However, it includes only those features that clients really care about.</p>
-                        <img class="img-fluid rounded mb-2 " src="assets/glossary/facade.png" alt="..." />
-                        <p><ul><li>The <i>Facade </i>provides convenient access to a particular part of the subsystem’s functionality. It knows where to direct the client’s request and how to operate all the moving parts.</li>
-                        <li>An <i>Additional Facade </i> class can be created to prevent polluting a single facade with unrelated features that might make it yet another complex structure. Additional facades can be used by both clients and other facades.</li>
-                        <li>The<i> Complex Subsystem</i> consists of dozens of various objects. To make them all do something meaningful, you have to dive deep into the subsystem’s implementation details, such as initializing objects in the correct order and supplying them with data in the proper format.
-                        <br>Subsystem classes aren’t aware of the facade’s existence. They operate within the system and work with each other directly.
-                        </li>
-                        <li>The <i>Client</i> uses the facade instead of calling the subsystem objects directly.</li></ul>
-                        </p>
-
+                        <iframe src="source_code/calculator_history_abstract.py.html" class="targetframe" style="height:300px" ;>
+                        </iframe>
+                        <p> The Common Calculator modified to implement the abstract method from history</p>
+                       <div></div>
+                        <iframe src="source_code/common_calculator_modified.py.html" class="targetframe" style="height:400px" ;>
+                        </iframe>
+                        <div></div>
+                        <p> The School Calculator modified to implement the abstract method from history</p>
+                        <iframe src="source_code/school_calculator_modified.py.html" class="targetframe" style="height:400px" ;>
+                        </iframe>
+                        <p> From the above example we have seen that we eliminated the dependency between two classes.</p>
+                        <p></p>
+                        <h5 class=text-muted><i>Conclusion</i></h5>
+                        <p>So far, we have discussed these five principles and highlighted their goals. They are to help you make your code easy to adjust, extend and test with little to no problems.</p>
 
 
                     </div>

@@ -12281,7 +12281,9 @@ textarea.form-control-lg {
 .code_section .s2 {
   color: #cc7832;
 }
-
+.code_section .log {
+  color: #f50707;
+}
 
 .code_section .sl {
   color: #846db2;

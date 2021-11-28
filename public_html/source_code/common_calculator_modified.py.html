@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>common_calculator_modified.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+common_calculator_modified.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">math</span>
+
+<span class="s0">from </span><span class="s1">calculator.calculator_history1 </span><span class="s0">import </span><span class="s1">CalculatorHistory</span>
+
+
+<span class="s0">class </span><span class="s1">Common_calculator(CalculatorHistory):</span>
+
+    <span class="s0">def </span><span class="s1">add(self</span><span class="s0">, </span><span class="s1">a</span><span class="s0">, </span><span class="s1">b):</span>
+        <span class="s1">result = sum(a</span><span class="s0">, </span><span class="s1">b)</span>
+        <span class="s1">self.add_to_history(result)</span>
+        <span class="s0">return </span><span class="s1">result</span>
+
+    <span class="s0">def </span><span class="s1">add_three_values(self</span><span class="s0">, </span><span class="s1">a</span><span class="s0">, </span><span class="s1">b</span><span class="s0">, </span><span class="s1">c):</span>
+        <span class="s1">result = a + b + c</span>
+        <span class="s1">self.add_to_history(result)</span>
+        <span class="s0">return </span><span class="s1">result</span>
+
+    <span class="s0">def </span><span class="s1">cal_subtract(self</span><span class="s0">, </span><span class="s1">a</span><span class="s0">, </span><span class="s1">b):</span>
+        <span class="s1">result = a - b</span>
+        <span class="s1">self.add_to_history(result)</span>
+        <span class="s0">return </span><span class="s1">result</span>
+
+    <span class="s0">def </span><span class="s1">cal_multiplication(self</span><span class="s0">, </span><span class="s1">nums):</span>
+        <span class="s1">result = math.prod(nums)</span>
+        <span class="s1">self.add_to_history(result)</span>
+        <span class="s0">return </span><span class="s1">result</span>
+
+    <span class="s0">def </span><span class="s1">division(self</span><span class="s0">, </span><span class="s1">a</span><span class="s0">, </span><span class="s1">b):</span>
+        <span class="s1">result = a / b</span>
+        <span class="s1">self.add_to_history(result)</span>
+        <span class="s0">return </span><span class="s1">result</span>
+
+    <span class="s0">def </span><span class="s1">add_to_history(self</span><span class="s0">, </span><span class="s1">result):</span>
+        <span class="s1">self.calculation_history.append(result)</span>
+</pre>
+</body>
+</html>
