@@ -27,7 +27,7 @@ All subpages links are present under "Additional Reading" in Webpages
 
 
 ### Link to the source code repo
-Every tasak has been written and output ahs been tested.Branches are given taskname 
+Every task has been written and output ahs been tested.Branches are given taskname 
 
 
 [Python source code repo](https://github.com/njitvjk/Project2_crashcource)
