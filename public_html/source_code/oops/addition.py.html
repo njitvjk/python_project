@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>addition.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #629755; font-style: italic;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #cc7832;}
+.s3 { color: #6897bb;}
+.s4 { color: #808080;}
+.s5 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+addition.py</font>
+</center></td></tr></table>
+<pre><span class="s0">&quot;&quot;&quot;Child Class: Addition&quot;&quot;&quot;</span>
+
+<span class="s2">from </span><span class="s1">operations.calculation_base </span><span class="s2">import </span><span class="s1">Calculation</span>
+<span class="s2">from </span><span class="s1">operations.calculator_history </span><span class="s2">import </span><span class="s1">CalculationHistory</span>
+
+
+<span class="s2">class </span><span class="s1">Addition(Calculation</span><span class="s2">,</span><span class="s1">CalculationHistory):</span>
+    <span class="s0">&quot;&quot;&quot; Addition of two values a and b inherited from Parent class&quot;&quot;&quot;</span>
+    <span class="s2">def </span><span class="s1">__init__(self</span><span class="s2">, </span><span class="s1">value_a</span><span class="s2">, </span><span class="s1">value_b</span><span class="s2">, </span><span class="s1">value_c=</span><span class="s3">0</span><span class="s1">): </span><span class="s4"># Method overloading</span>
+        <span class="s1">super().__init__(value_a</span><span class="s2">, </span><span class="s1">value_b)</span>
+        <span class="s1">cal = Calculation(value_a</span><span class="s2">, </span><span class="s1">value_b)</span>
+        <span class="s1">self.value_b = cal.get_value_b()</span>
+        <span class="s1">self.value_a = cal.get_value_a()</span>
+        <span class="s1">self.result=</span><span class="s3">0</span>
+        <span class="s1">self.value_c=value_c</span>
+
+    <span class="s2">def </span><span class="s1">get_output(self):</span>
+        <span class="s0">&quot;&quot;&quot;function returns the addition result&quot;&quot;&quot;</span>
+        <span class="s1">self.result=self.value_a + self.value_b+self.value_c</span>
+        <span class="s1">self.append_calculation_to_history()</span>
+        <span class="s1">print(self.result)</span>
+        <span class="s2">return </span><span class="s1">self.result</span>
+
+    <span class="s2">def </span><span class="s1">get_description(self):</span>
+        <span class="s1">print(</span><span class="s5">&quot;Performing Addition&quot;</span><span class="s1">) </span><span class="s4"># Method overriding</span>
+
+    <span class="s2">def </span><span class="s1">append_calculation_to_history(self): </span><span class="s4"># implementing abstract method</span>
+        <span class="s1">CalculationHistory.calculation_history.append(self.result)</span>
+        <span class="s1">print(CalculationHistory.calculation_history)</span>
+</pre>
+</body>
+</html>

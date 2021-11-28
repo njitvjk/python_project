@@ -36,10 +36,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <!--                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">HOME</a></li>-->
-                <li class="nav-item"><a class="nav-link" href="history.html">BASICS</a></li>
-                <li class="nav-item"><a class="nav-link" href="browserwars1.html">OOPS</a></li>
-                <li class="nav-item"><a class="nav-link" href="ecommerce.html">TESTING</a></li>
-                <li class="nav-item"><a class="nav-link" href="socialnetworking.html">SOLID</a></li>
+                <li class="nav-item"><a class="nav-link" href="basics.html">PYTHON BASICS</a></li>
+                <li class="nav-item"><a class="nav-link" href="OOPS.html">OOPS</a></li>
+                <li class="nav-item"><a class="nav-link" href="pylint.html">PYLINT</a></li>
+                <li class="nav-item"><a class="nav-link" href="testing.html">TESTING</a></li>
+                <li class="nav-item"><a class="nav-link" href="SOLID.html">SOLID</a></li>
+                <li class="nav-item"><a class="nav-link" href="glossary.html">GLOSSARY</a></li>
 <!--                <li class="nav-item"><a class="nav-link" href="searchengine.html"></a></li>-->
 <!--                <li class="nav-item"><a class="nav-link" href="testing.html">INTERNET ELEMENTS</a></li>-->
             </ul>
@@ -48,7 +50,7 @@
 </nav>
 <!-- Hero section-->
 <div class="container bg-grey mt-2">
-    <h5 class="display-6 text-center ">Unit tests detect changes that may break a design contract</h5>
+    <h5 class="display-6 text-center ">Python is Older Than Java</h5>
     <!--  <p class="lead"></p>-->
 </div>
 
@@ -64,9 +66,9 @@
                 <!-- Post header-->
                 <header class="mb-4">
                     <!-- Post title-->
-                    <h2 class="fw-bolder mb-1">Testing and coverage </h2>
+                    <h2 class="fw-bolder mb-1" id="getting_started">Testing and coverage </h2>
                     <!-- Post meta content-->
-                    <div class="text-muted fst-italic mb-2">Posted on November 23, 2021 by Now-U-Know. Image Credit:Kowsalya Vijayan</a></div>
+                    <div class="text-muted fst-italic mb-2">Posted on November 23, 2021 by Now-U-Know. Image Credit:Kowsalya Vijayan</div>
                     <!-- Post categories-->
                     <!--                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>-->
                     <!--                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>-->
@@ -106,7 +108,7 @@
                     <div class="row  ">
 
                         <div class="col">
-                            <h5 class="font-weight-bold">Pytest installation</h5>
+                            <h5 class="font-weight-bold" id="installation">Pytest installation</h5>
                             <h6 class=text-muted><i>Step1:Install</i></h6>
                             <div class="col">
                                 <div class="code_section">
@@ -122,8 +124,8 @@
                                 </div>
                             </div>
                             <br>
-                            <h5 class="font-weight-bold">Running pytest</h5>
-                            <p>The below pytest has been ran for the calculator program that you have just read in AAA testing</p>
+                            <h5 class="font-weight-bold" id="testrun">Running pytest</h5>
+                            <p>The below pytest has been run for the calculator program that you have just read in AAA testing</p>
                             <img class="img-fluid rounded mb-2" src="assets/testing/pytest.JPG" alt="..." />
                             <p>pytest presents the test results differently than unittest. The report shows:</p>
                             <ol><li><p><i>The system state, including which versions of Python, pytest, and any plugins you have installed</i></p></li>
@@ -134,7 +136,7 @@
                                 <li><p><i>An F means that the test has failed.</i></p></li>
                                 <li><p><i>An E means that the test raised an unexpected exception.</i></p></li></ul>
                             <br>
-                            <h5 class="font-weight-bold">Pytest Fixtures</h5>
+                            <h5 class="font-weight-bold" id="fixture">Pytest Fixtures</h5>
                             <p>Fixtures are used when we want to run some code before every test method. So instead of repeating the same code in every test we define fixtures. A test method can use a Pytest fixture by mentioning the fixture as an input parameter.</p>
                             <p>A method is marked as a Pytest fixture by marking with</p>
                             <div class="col">
@@ -147,7 +149,7 @@
                             <img class="img-fluid rounded mb-2" src="assets/testing/fixture.JPG" alt="..." />
 
                             <br>
-                            <h5 class="font-weight-bold">Coverage with Pytest</h5>
+                            <h5 class="font-weight-bold" id="coverage">Coverage with Pytest</h5>
                             <p>Code coverage is the measure of coverage by the test suite. 100% coverage represents that the system has been completely tested  </p>
 
                             <h6 class=text-muted><i>Installation</i></h6>
@@ -179,7 +181,7 @@
                             <img class="img-fluid rounded mb-2" src="assets/testing/coverage.png" alt="..." />
                             <p>The code  shows 100% coverage for the calculator program.</p>
                             <br>
-                            <h5 class="font-weight-bold">Third Party tool- <b>Coveralls</b></h5>
+                            <h5 class="font-weight-bold" id="coveralls">Third Party tool- <b>Coveralls</b></h5>
                             <p>Coveralls is a web service to help you track your code coverage over time, and ensure that all your new code is fully covered.</p>
                             <p> You should have a repo hosted in Git and authorize Coveralls to use the repo and its branches</p>
                             <p>The coverage shown for calculator program :</p>
@@ -197,37 +199,43 @@
 
         <div class="col-lg-4 mt-4">
             <!-- Search widget-->
-            <div class="card mb-4 mt-7 ">
+            <div class="card mb-4 mt-7 bg-grey ">
                 <h5 class="highlight header-colorize text-uppercase ">Table of contents</h5>
-                <div class="card-body  header-colorize text-center"><a href="internetelement2.html">AAA Pattern for python testing </a></div>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#getting_started">Introduction </a></p>
 
-                <div class="card-body header-colorize text-center"><a href="internetelement2.html">Pytest and Coverage </a></div>
-                <div class="card-body  header-colorize text-center"><a href="internetelement2.html">Continuous Integration</a></div>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#installation">Pytest installation</a></p>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#testrun">Running pytest</a></p>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#fixture">Pytest Fixtures</a></p>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#coverage">Coverage with Pytest</a></p>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#coveralls">Coveralls</a></p>
+
+
+
 
             </div>
             <div class="card mb-4 ">
                 <div class="card-header text-md-center text-center">Code Repositories for Hand On training</div>
                 <div class="card-body">
-                    <div class="row ">
+                    <div class="row " style="padding-left: 60px">
                         <!--                        <div class="col-md-6">-->
                         <!--                            <ul class="list-inline-item  mb-0">-->
-                        <p class="text-center"><a href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/">Simple Calculator Program with Unittest</a></p>
-                        <p class="text-center"><a href="https://pypi.org/project/flake8-aaa/">Improved Calculator Version with AAA</a></p>
-                        <p class="text-center"><a href="https://learnbyexample.gitbooks.io/python-basics/content/Testing.html">AAA testing with External data </a><p>
-                        <!--                        </div>-->
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/python_concepts">python_basic_concepts</a></p>
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/SOLID">Understanding SOLID principles</a></p>
+                        <p><a href="https://github.com/njitvjk/Project2_crashcource/tree/branch1">AAA testing with External data</a></p>
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/calc_part2">OOPS concepts using Calculator Program</a></p>
+                        <p ><a href="  https://github.com/njitvjk/calc2/tree/calc_part3">Calculator Program with tuples</a></p>
+
                     </div>
                 </div>
             </div>
             <div class="card mb-4 ">
                 <div class="card-header text-md-center text-center">Online Resources</div>
                 <div class="card-body">
-                    <div class="row ">
-<!--                        <div class="col-md-6">-->
-                            <!--                            <ul class="list-inline-item  mb-0">-->
-                            <p class="text-center"><a href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/">Blog from Automation panda</a></p>
-                            <p class="text-center"><a href="https://pypi.org/project/flake8-aaa/">flake8-aaa</a></p>
-                            <p class="text-center"><a href="https://learnbyexample.gitbooks.io/python-basics/content/Testing.html">Testing Basics from GitBooks</a><p>
-<!--                        </div>-->
+                    <div class="row " style="padding-left: 90px">
+                        <p ><a href="https://www.programiz.com/python-programming">Python for beginners</a></p>
+                        <p><a href="https://www.python.org/">Official Python Website</a></p>
+                        <p ><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Wikipedia-Python</a><p>
+                        <!--                        </div>-->
                     </div>
                 </div>
             </div>
@@ -246,7 +254,7 @@
         <div class="container">
             <p class="m-0 text-center text-white">Copyright &copy; Kowsalya_Vijayan 2021</p>
             <p class="m-0 text-center text-white">
-                <a href="https://github.com/njitvjk/internethistory_project" >Project Repo</a><span></span>
+                <a href="https://github.com/njitvjk/python_project" >Project Repo</a><span></span>
                 <a href="http://validator.w3.org/check/referer"><img src="https://www.w3.org/Icons/valid-html401-blue" alt=""></a></p>
 
         </div>

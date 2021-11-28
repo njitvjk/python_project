@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>Calculator_ISP.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Calculator_ISP.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">math</span>
+
+
+<span class="s2"># This is the Class taken as example for SOLID</span>
+<span class="s0">class </span><span class="s1">Calculator:</span>
+
+    <span class="s0">def </span><span class="s1">__init(self):</span>
+        <span class="s1">self.calculation_history = []</span>
+
+    <span class="s0">def </span><span class="s1">cal_add(self</span><span class="s0">, </span><span class="s1">a</span><span class="s0">, </span><span class="s1">b):</span>
+        <span class="s1">result = a + b</span>
+        <span class="s1">self.add_to_history(result)</span>
+        <span class="s0">return </span><span class="s1">result</span>
+
+    <span class="s0">def </span><span class="s1">cal_substract(self</span><span class="s0">, </span><span class="s1">a</span><span class="s0">, </span><span class="s1">b):</span>
+        <span class="s1">result = a - b</span>
+        <span class="s1">self.add_to_history(result)</span>
+        <span class="s0">return </span><span class="s1">result</span>
+
+    <span class="s0">def </span><span class="s1">cal_multplicaton(self</span><span class="s0">, </span><span class="s1">a</span><span class="s0">, </span><span class="s1">b):</span>
+        <span class="s1">result = a * b</span>
+        <span class="s1">self.add_to_history(result)</span>
+        <span class="s0">return </span><span class="s1">result</span>
+
+    <span class="s0">def </span><span class="s1">cal_division(self</span><span class="s0">, </span><span class="s1">a</span><span class="s0">, </span><span class="s1">b):</span>
+        <span class="s1">result = a / b</span>
+        <span class="s1">self.add_to_history(result)</span>
+        <span class="s0">return </span><span class="s1">result</span>
+
+    <span class="s0">def </span><span class="s1">cal_sin_of(self</span><span class="s0">, </span><span class="s1">x):</span>
+        <span class="s1">result = math.sin(x)</span>
+        <span class="s1">self.add_to_history(result)</span>
+        <span class="s0">return </span><span class="s1">result</span>
+
+    <span class="s0">def </span><span class="s1">cal_cos_of(self</span><span class="s0">, </span><span class="s1">x):</span>
+        <span class="s1">result = math.cos(x)</span>
+        <span class="s1">self.add_to_history(result)</span>
+        <span class="s0">return </span><span class="s1">result</span>
+
+    <span class="s0">def </span><span class="s1">cal_tan_of(self</span><span class="s0">, </span><span class="s1">x):</span>
+        <span class="s1">result = math.tan(x)</span>
+        <span class="s1">self.add_to_history(result)</span>
+        <span class="s0">return </span><span class="s1">result</span>
+
+    <span class="s0">def </span><span class="s1">display_history(self):</span>
+        <span class="s0">return </span><span class="s1">self.calculation_history[-</span><span class="s3">1</span><span class="s1">]</span>
+
+    <span class="s0">def </span><span class="s1">add_to_history(self</span><span class="s0">, </span><span class="s1">result):</span>
+        <span class="s1">self.calculation_history.append(result)</span>
+</pre>
+</body>
+</html>

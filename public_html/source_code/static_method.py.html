@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>static_method.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #808080;}
+.s4 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+static_method.py</font>
+</center></td></tr></table>
+<pre><span class="s0">class </span><span class="s1">Car:</span>
+
+    <span class="s0">def </span><span class="s1">__init__(self</span><span class="s0">, </span><span class="s1">make</span><span class="s0">, </span><span class="s1">model</span><span class="s0">, </span><span class="s1">year):</span>
+        <span class="s1">self.make = make</span>
+        <span class="s1">self.model = model</span>
+        <span class="s1">self.year = year</span>
+
+    <span class="s1">@staticmethod</span>
+    <span class="s0">def </span><span class="s1">is_electric(make):</span>
+        <span class="s0">if </span><span class="s1">make == </span><span class="s2">'Tesla'</span><span class="s1">:</span>
+            <span class="s0">return True</span>
+        <span class="s0">else</span><span class="s1">:</span>
+            <span class="s0">return False</span>
+
+    <span class="s3"># instance method</span>
+    <span class="s0">def </span><span class="s1">check_car_variant(self):</span>
+        <span class="s3"># call static method from instance method</span>
+        <span class="s1">is_electric_flag = self.is_electric(self.make)</span>
+        <span class="s1">print(</span><span class="s2">f'Is </span><span class="s0">{</span><span class="s1">self.make</span><span class="s0">} </span><span class="s2">an electric variant:'</span><span class="s0">, </span><span class="s1">is_electric_flag)</span>
+
+
+<span class="s1">audi = Car(</span><span class="s2">'Audi'</span><span class="s0">, </span><span class="s2">'a4'</span><span class="s0">, </span><span class="s4">2019</span><span class="s1">)</span>
+<span class="s1">audi.check_car_variant()</span>
+
+<span class="s1">ford = Car(</span><span class="s2">'Ford'</span><span class="s0">, </span><span class="s2">'eco sport'</span><span class="s0">, </span><span class="s4">2015</span><span class="s1">)</span>
+
+<span class="s1">tesla = Car(</span><span class="s2">'Tesla'</span><span class="s0">, </span><span class="s2">'model s'</span><span class="s0">, </span><span class="s4">2019</span><span class="s1">)</span>
+
+
+<span class="s1">print(ford.check_car_variant() </span><span class="s0">is </span><span class="s1">audi.check_car_variant())</span>
+
+<span class="s1">print(ford.is_electric(</span><span class="s2">'Ford'</span><span class="s1">) </span><span class="s0">is </span><span class="s1">tesla.is_electric(</span><span class="s2">'Tesla'</span><span class="s1">))</span>
+
+<span class="s1">print(ford.is_electric(</span><span class="s2">'Ford'</span><span class="s1">) </span><span class="s0">is </span><span class="s1">audi.is_electric(</span><span class="s2">'Audi'</span><span class="s1">))</span>
+</pre>
+</body>
+</html>

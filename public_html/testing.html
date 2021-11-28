@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Internethistory_elements</title>
+    <title>testing</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Bootstrap icons-->
@@ -36,12 +36,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <!--                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">HOME</a></li>-->
-                <li class="nav-item"><a class="nav-link" href="history.html">PYTHON BASICS</a></li>
-                <li class="nav-item"><a class="nav-link" href="history.html">GLOSSARY</a></li>
-                <li class="nav-item"><a class="nav-link" href="history.html">GLOSSARY</a></li>
-                <li class="nav-item"><a class="nav-link" href="browserwars1.html">OOPS</a></li>
-                <li class="nav-item"><a class="nav-link" href="ecommerce.html">TESTING</a></li>
-                <li class="nav-item"><a class="nav-link" href="socialnetworking.html">SOLID</a></li>
+                <li class="nav-item"><a class="nav-link" href="basics.html">PYTHON BASICS</a></li>
+                <li class="nav-item"><a class="nav-link" href="OOPS.html">OOPS</a></li>
+                <li class="nav-item"><a class="nav-link" href="pylint.html">PYLINT</a></li>
+                <li class="nav-item"><a class="nav-link" href="testing.html">TESTING</a></li>
+                <li class="nav-item"><a class="nav-link" href="SOLID.html">SOLID</a></li>
+                <li class="nav-item"><a class="nav-link" href="glossary.html">GLOSSARY</a></li>
 
 <!--                <li class="nav-item"><a class="nav-link" href="searchengine.html"></a></li>-->
 <!--                <li class="nav-item"><a class="nav-link" href="testing.html">INTERNET ELEMENTS</a></li>-->
@@ -67,9 +67,9 @@
                 <!-- Post header-->
                 <header class="mb-4">
                     <!-- Post title-->
-                    <h2 class="fw-bolder mb-1">Testing with AAA pattern for Python </h2>
+                    <h2 class="fw-bolder mb-1" id="getting_started">Testing with AAA pattern for Python </h2>
                     <!-- Post meta content-->
-                    <div class="text-muted fst-italic mb-2">Posted on November 23, 2021 by Now-U-Know. Image Credit:Kowsalya Vijayan</a></div>
+                    <div class="text-muted fst-italic mb-2">Posted on November 23, 2021 by Now-U-Know. Image Credit:Kowsalya Vijayan</div>
                     <!-- Post categories-->
                     <!--                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>-->
                     <!--                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>-->
@@ -105,7 +105,7 @@
                     <div class="row  ">
 
                         <div class="col">
-                            <h5 class="font-weight-bold">AAA demonstration using Calculator Program</h5>
+                            <h5 class="font-weight-bold" id="AAA_demonstration">AAA demonstration using Calculator Program</h5>
                             <h6 class=text-muted><i>File structure</i></h6>
                             <p style="text-align:justify">
                             <ol><li><b><i>Calculator.py</i> </b>: The Calculator class is defined in Calculator.py. It has four functions that implements addition, subtraction, multiplication and division.</li>
@@ -113,7 +113,7 @@
                                 It also has four test functions to test addition,subtraction ,multiplication and division which test the Calculator class’s related functions</li>
                             <li><b><i>test_data.csv</i></b>: This is a CSV file that stores test data. One row of text in this file contains six columns separated by a comma.</li>
                             </ol>
-                            </p>
+
                         </div>
                         <p style="text-align:justify">Unit test library has been imported and unit test case class has been created that extends the <b>unittest.TestCase</b>.</p>
                         <div class="col">
@@ -127,7 +127,7 @@
                         </div>
                     <hr>
                     <div class="col">
-                    <h6 class=text-muted ><i>Arrange</i></h6>
+                    <h6 class=text-muted id="Arrange"><i>Arrange</i></h6>
                         <div class="code_section">
                             <span class = "sd">@classmethod</span>
 
@@ -161,14 +161,14 @@
                        <p> setup function will be executed before each test function
                            These functions will instantiate the object and will load the data from external file to conduct the test</p>
                         <p><i>External Test Data : <b>test_data.csv </b></i>
-                        <li>1,1,2,0,1,1.0</li>
-                        <li> 1,1,2,0,1,1.0</li>
+                        <ul style="padding-left:50px "><li>1,1,2,0,1,1.0</li>
+                        <li> 1,1,2,0,1,1.0</li></ul>
                         <br>
-                        The first column is the first number x, the second column is the second number y, the third column is the value of x+y, the fourth column is the value of x-y, the fifth column is the value of x*y, the sixth column is the value of x/y.
-                        </p>
+                        <p>The first column is the first number x, the second column is the second number y, the third column is the value of x+y, the fourth column is the value of x-y, the fifth column is the value of x*y, the sixth column is the value of x/y.</p>
+
                         <hr>
                         <div class="col">
-                            <h6 class=text-muted ><i>Act</i></h6>
+                            <h6 class=text-muted id="Act"><i>Act</i></h6>
                             <div class="code_section">
 
                                 <div></div>
@@ -198,7 +198,7 @@
                         <p>external file and then returns the output to the calling method from the test case.</p>
                         <hr>
                         <div class="col">
-                            <h6 class=text-muted><i>Assert</i></h6>
+                            <h6 class=text-muted id="Assert"><i>Assert</i></h6>
                             <div class="code_section">
 
                                 <div></div>
@@ -207,7 +207,7 @@
                                 <div></div>
                                 <span class = "docstring">&nbsp;&nbsp;&nbsp;&nbsp;""""""Cas1:Test Addition""""""</span><br>
                                 <span class = "comment">&nbsp;&nbsp;&nbsp;&nbsp;# get each row text from the csv file.</span><br>
-                                <span class = "imp">&nbsp;&nbsp;&nbsp;&nbsp;for</span><span class="p">&nbsp;row</span><span class="imp">&nbsp;in</span>&nbsp;test_data_row_list :</span><br>
+                                <span class = "imp">&nbsp;&nbsp;&nbsp;&nbsp;for<span class="p">&nbsp;row</span><span class="imp">&nbsp;in</span>&nbsp;test_data_row_list :</span><br>
                                 <span class = "comment">&nbsp;&nbsp;&nbsp;&nbsp; # the first column in the text line is x value.</span><br>
                                 <span class="p">&nbsp;&nbsp;&nbsp;&nbsp;  x = row[0]</span><br>
                                 <span class = "comment">&nbsp;&nbsp;&nbsp;&nbsp; # the second column in the text line is y value.</span><br>
@@ -237,27 +237,27 @@
 
                         <hr>
                         <div class="col">
-                            <h6 class=text-muted><i>HTML_Report -test build</i></h6>
+                            <h6 class=text-muted id="build_report"><i>HTML_Report -test build</i></h6>
                             <!--                            <div class="col">-->
-                            <iframe src="test_results.html" id="targetframe3" class="targetframe" style="border: none";>
+                            <iframe src="source_code/test_results.html" id="targetframe3" class="targetframe" style="border: none" >
                             </iframe>
                         </div>
 
 
-                            <h6 class=text-muted><i>Complete Source Files</i></h6>
+                            <h6 class=text-muted id="source_files"><i>Complete Source Files</i></h6>
                             <p> Click on each links to toggle preview</p>
-                            <p> Code reference </p>
+
 <!--                            <div class="col">-->
 
                             <a href="#link" onclick="$('iframe#targetframe').toggle()">Calculator_test.py</a><br />
-                            <iframe src="calculator_test.py.html" id="targetframe" class="targetframe" style="border: none";>
+                            <iframe src="source_code/calculator_test.py.html" id="targetframe" class="targetframe" style="border: none" >
                             </iframe>
 
                             <a href="#link" onclick="$('iframe#targetframe2').toggle()">Calculator.py</a><br />
-                            <iframe src="calculator.py.html" id="targetframe2" class="targetframe" style="border: none";>
+                            <iframe src="source_code/calculator.py.html" id="targetframe2" class="targetframe" style="border: none" >
                             </iframe>
                         <a href="#link" onclick="$('iframe#targetframe4').toggle()">Output</a><br />
-                        <iframe src="output.html.txt" id="targetframe4" class="targetframe" style="border: none";>
+                        <iframe src="source_code/output.html.txt" id="targetframe4" class="targetframe" style="border: none" >
                         </iframe>
 
 
@@ -288,41 +288,71 @@
 
         <!-- Side widgets-->
 
-        <div class="col-lg-4 mt-4">
+        <div class="col-lg-4 mt-4" >
             <!-- Search widget-->
-            <div class="card mb-4 mt-7 ">
+            <div class="card mb-4 mt-7 bg-grey ">
                 <h5 class="highlight header-colorize text-uppercase ">Table of contents</h5>
-                <div class="card-body  header-colorize text-center"><a href="internetelement2.html">AAA Pattern for python testing </a></div>
 
-                <div class="card-body header-colorize text-center"><a href="internetelement2.html">Pytest and Coverage </a></div>
-                <div class="card-body  header-colorize text-center"><a href="internetelement2.html">Continuous Integration</a></div>
+                <p class="header-colorize  "  style="padding-left: 90px"><a href="#getting_started">Introduction</a></p>
+
+                <p class="header-colorize  " style="padding-left: 90px"><a href="#AAA_demonstration">AAA Demonstration</a></p>
+
+                <p class="header-colorize " style="padding-left: 90px"><a href="#Arrange">Arrange</a></p>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#Act">Act</a></p>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#Assert">Assert</a></p>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#build_report">HTML Build report</a></p>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#source_files">Source Code Files-Calculator</a></p>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#getting_started">Introduction</a></p>
+
+
 
 
 <!--                <div class="card-body bg-grey header-colorize text-center"><a href="internetelement2.html">learn about test build and coverage </a></div>-->
             </div>
+            <div class="card mb-4 bg-grey ">
+                <div class="card-header text-md-center text-center">Additional Reading</div>
+                <div class="card-body">
+                    <div class="row ">
+                        <div class="card-body header-colorize " style="padding-left: 90px"><a href="coverage.html">Pytest and Coverage </a></div>
+                        <div class="card-body  header-colorize " style="padding-left: 90px"><a href="ci_.html">Continuous Integration</a></div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
             <div class="card mb-4 ">
                 <div class="card-header text-md-center text-center">Code Repositories for Hand On training</div>
                 <div class="card-body">
-                    <div class="row ">
+                    <div class="row " style="padding-left: 70px">
                         <!--                        <div class="col-md-6">-->
                         <!--                            <ul class="list-inline-item  mb-0">-->
-                        <p class="text-center"><a href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/">Simple Calculator Program with Unittest</a></p>
-                        <p class="text-center"><a href="https://pypi.org/project/flake8-aaa/">Improved Calculator Version with AAA</a></p>
-                        <p class="text-center"><a href="https://learnbyexample.gitbooks.io/python-basics/content/Testing.html">AAA testing with External data </a><p>
-                        <!--                        </div>-->
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/python_concepts">python_basic_concepts</a></p>
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/SOLID">Understanding SOLID principles</a></p>
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/branch1">AAA testing with External data</a></p>
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/calc_part2">OOPS concepts using Calculator Program</a></p>
+                        <p ><a href="  https://github.com/njitvjk/calc2/tree/calc_part3">Calculator Program with tuples</a></p>
+
                     </div>
                 </div>
             </div>
             <div class="card mb-4 ">
                 <div class="card-header text-md-center text-center">Online Resources</div>
                 <div class="card-body">
-                    <div class="row ">
+                    <div class="row " style="padding-left: 70px">
 <!--                        <div class="col-md-6">-->
                             <!--                            <ul class="list-inline-item  mb-0">-->
-                            <p class="text-center"><a href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/">Blog from Automation panda</a></p>
-                            <p class="text-center"><a href="https://pypi.org/project/flake8-aaa/">flake8-aaa</a></p>
-                            <p class="text-center"><a href="https://learnbyexample.gitbooks.io/python-basics/content/Testing.html">Testing Basics from GitBooks</a><p>
-<!--                        </div>-->
+                        <p ><a href="https://www.programiz.com/python-programming">Python for beginners</a></p>
+                        <p ><a href="https://www.python.org/">Official Python Website</a></p>
+                        <p ><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Wikipedia-Python</a><p>
+                        <!--                        </div>-->
                     </div>
                 </div>
             </div>
@@ -341,7 +371,7 @@
         <div class="container">
             <p class="m-0 text-center text-white">Copyright &copy; Kowsalya_Vijayan 2021</p>
             <p class="m-0 text-center text-white">
-                <a href="https://github.com/njitvjk/internethistory_project" >Project Repo</a><span></span>
+                <a href="https://github.com/njitvjk/python_project" >Project Repo</a><span></span>
                 <a href="http://validator.w3.org/check/referer"><img src="https://www.w3.org/Icons/valid-html401-blue" alt=""></a></p>
 
         </div>

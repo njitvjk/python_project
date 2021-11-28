@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>school_calculator_modified.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+school_calculator_modified.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">math</span>
+
+<span class="s0">from </span><span class="s1">calculator.calculator_history </span><span class="s0">import </span><span class="s1">CalculatorHistory</span>
+<span class="s0">from </span><span class="s1">calculator.common_calculator_modified </span><span class="s0">import </span><span class="s1">Common_calculator</span>
+<span class="s0">from </span><span class="s1">operations.school_operations </span><span class="s0">import </span><span class="s1">ITrigonometryCalci</span>
+
+
+<span class="s0">class </span><span class="s1">SchoolCalculator(Common_calculator</span><span class="s0">, </span><span class="s1">ITrigonometryCalci</span><span class="s0">,</span><span class="s1">CalculatorHistory):</span>
+
+    <span class="s0">def </span><span class="s1">sin_of(self</span><span class="s0">, </span><span class="s1">x):</span>
+        <span class="s1">result= math.sin(x)</span>
+        <span class="s1">self.add_to_history(result)</span>
+        <span class="s0">return </span><span class="s1">result</span>
+
+    <span class="s0">def </span><span class="s1">cos_of(self</span><span class="s0">, </span><span class="s1">x):</span>
+        <span class="s1">result = math.cos(x)</span>
+        <span class="s1">self.add_to_history(result)</span>
+        <span class="s0">return </span><span class="s1">result</span>
+
+    <span class="s0">def </span><span class="s1">tan_of(self</span><span class="s0">, </span><span class="s1">x):</span>
+        <span class="s1">result= math.tan(x)</span>
+        <span class="s1">self.add_to_history(result)</span>
+        <span class="s0">return </span><span class="s1">result</span>
+
+    <span class="s0">def </span><span class="s1">add_to_history(self</span><span class="s0">,</span><span class="s1">result):</span>
+        <span class="s1">self.calculation_history.append(result)</span></pre>
+</body>
+</html>

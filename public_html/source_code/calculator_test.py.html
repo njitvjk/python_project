@@ -1,0 +1,184 @@
+<html>
+<head>
+<title>calculator_test.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #629755; font-style: italic;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #cc7832;}
+.s3 { color: #808080;}
+.s4 { color: #6a8759;}
+.s5 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+calculator_test.py</font>
+</center></td></tr></table>
+<pre><span class="s0">&quot;&quot;&quot;Tests file &quot;&quot;&quot;</span>
+<span class="s2">import </span><span class="s1">csv</span>
+<span class="s2">import </span><span class="s1">unittest</span>
+
+<span class="s2">from </span><span class="s1">pyunitreport </span><span class="s2">import </span><span class="s1">HTMLTestRunner</span>
+
+<span class="s2">from </span><span class="s1">calculator.Calculator  </span><span class="s2">import </span><span class="s1">Calculator</span>
+
+<span class="s3"># test data file path, the file is a csv file.</span>
+
+<span class="s1">test_data_file_path = </span><span class="s4">'./test.csv'</span>
+
+<span class="s3"># test data file object</span>
+<span class="s1">test_data_file_object = </span><span class="s2">None</span>
+
+<span class="s3"># test data row list.</span>
+<span class="s1">test_data_row_list = list()</span>
+
+
+<span class="s3"># load test data from ./test_data.csv file.</span>
+<span class="s2">def </span><span class="s1">load_test_data():</span>
+    <span class="s2">global </span><span class="s1">test_data_file_object</span><span class="s2">, </span><span class="s1">test_data_row_list</span>
+    <span class="s3"># open test data csv file.</span>
+    <span class="s1">test_data_file_object = open(test_data_file_path</span><span class="s2">, </span><span class="s4">'r'</span><span class="s1">)</span>
+    <span class="s3"># read the csv file and return the text line list.</span>
+    <span class="s1">csv_reader = csv.reader(test_data_file_object</span><span class="s2">, </span><span class="s1">delimiter=</span><span class="s4">','</span><span class="s1">)</span>
+
+    <span class="s2">for </span><span class="s1">row </span><span class="s2">in </span><span class="s1">csv_reader:</span>
+        <span class="s1">test_data_row_list.append(row)</span>
+
+    <span class="s1">print(</span><span class="s4">'open and load data from test_data.csv complete.'</span><span class="s1">)</span>
+
+
+<span class="s3"># close and release the test data file object.</span>
+<span class="s2">def </span><span class="s1">close_test_data_file():</span>
+    <span class="s2">global </span><span class="s1">test_data_file_object</span>
+    <span class="s2">if </span><span class="s1">test_data_file_object </span><span class="s2">is not None</span><span class="s1">:</span>
+        <span class="s1">test_data_file_object.close()</span>
+        <span class="s1">test_data_file_object = </span><span class="s2">None</span>
+        <span class="s1">print(</span><span class="s4">'close file test_data.csv complete.'</span><span class="s1">)</span>
+
+
+<span class="s2">def </span><span class="s1">build_test_suite():</span>
+    <span class="s3"># create unittest.TestSuite object.</span>
+    <span class="s1">test_suite = unittest.TestSuite()</span>
+    <span class="s1">print(</span><span class="s4">&quot;inside build test suite&quot;</span><span class="s1">)</span>
+    <span class="s3"># add each test function to the test suite object.</span>
+    <span class="s1">test_suite.addTest(TestApp(</span><span class="s4">'test_0001_add'</span><span class="s1">))</span>
+    <span class="s1">test_suite.addTest(TestApp(</span><span class="s4">'test_0002_subtract'</span><span class="s1">))</span>
+    <span class="s1">test_suite.addTest(TestApp(</span><span class="s4">'test_0003_multiply'</span><span class="s1">))</span>
+    <span class="s1">test_suite.addTest(TestApp(</span><span class="s4">'test_0004_division'</span><span class="s1">))</span>
+    <span class="s2">return </span><span class="s1">test_suite</span>
+
+
+<span class="s2">class </span><span class="s1">TestApp(unittest.TestCase):</span>
+    <span class="s0">&quot;&quot;&quot;Test for Calculator program&quot;&quot;&quot;</span>
+
+    <span class="s3"># this is the Calculator class instance.</span>
+    <span class="s1">calculator = </span><span class="s2">None</span>
+
+    <span class="s3"># class level setup function, execute once only before any test function.</span>
+    <span class="s1">@classmethod</span>
+    <span class="s2">def </span><span class="s1">setUpClass(cls):</span>
+        <span class="s1">load_test_data()</span>
+        <span class="s1">print(</span><span class="s4">''</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">'setUpClass'</span><span class="s1">)</span>
+
+    <span class="s3"># class level setup function, execute once only after all test function's execution.</span>
+    <span class="s1">@classmethod</span>
+    <span class="s2">def </span><span class="s1">tearDownClass(cls):</span>
+        <span class="s1">close_test_data_file()</span>
+        <span class="s1">print(</span><span class="s4">''</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">'tearDownClass'</span><span class="s1">)</span>
+
+    <span class="s3"># execute before every test case function run.</span>
+    <span class="s2">def </span><span class="s1">setUp(self):</span>
+        <span class="s1">self.calculator = Calculator()</span>
+        <span class="s1">print(</span><span class="s4">''</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">'setUp'</span><span class="s1">)</span>
+
+    <span class="s3"># execute after every test case function run.</span>
+    <span class="s2">def </span><span class="s1">tearDown(self):</span>
+        <span class="s3"># release the Calculator object.</span>
+        <span class="s2">if </span><span class="s1">self.calculator </span><span class="s2">is not None</span><span class="s1">:</span>
+            <span class="s1">self.calculator = </span><span class="s2">None</span>
+        <span class="s1">print(</span><span class="s4">''</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">'tearDown'</span><span class="s1">)</span>
+
+    <span class="s2">def </span><span class="s1">test_0001_add(self):</span>
+        <span class="s0">&quot;&quot;&quot;Case1:Addition&quot;&quot;&quot;</span>
+        <span class="s1">print(</span><span class="s4">''</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">'******test_addition******'</span><span class="s1">)</span>
+        <span class="s3"># get each row text from the csv file.</span>
+        <span class="s2">for </span><span class="s1">row </span><span class="s2">in </span><span class="s1">test_data_row_list:</span>
+            <span class="s3"># the first column in the text line is x value.</span>
+            <span class="s1">x = row[</span><span class="s5">0</span><span class="s1">]</span>
+            <span class="s3"># the second column in the text line is y value.</span>
+            <span class="s1">y = row[</span><span class="s5">1</span><span class="s1">]</span>
+            <span class="s3"># the third column in the text line is (x + y) value.</span>
+            <span class="s1">expect_result = row[</span><span class="s5">2</span><span class="s1">]</span>
+            <span class="s3"># Act</span>
+            <span class="s1">calc = Calculator()</span>
+            <span class="s1">result = calc.addition(x</span><span class="s2">, </span><span class="s1">y)</span>
+            <span class="s3"># result = self.calculator.plus(x, y)</span>
+            <span class="s1">print(str(x) + </span><span class="s4">' + ' </span><span class="s1">+ str(y) + </span><span class="s4">' = ' </span><span class="s1">+ str(result) + </span><span class="s4">', expect ' </span><span class="s1">+ str(expect_result))</span>
+            <span class="s3"># Assert</span>
+            <span class="s1">self.assertEqual(float(result)</span><span class="s2">, </span><span class="s1">float(expect_result))</span>
+
+    <span class="s2">def </span><span class="s1">test_0002_subtract(self):</span>
+        <span class="s0">&quot;&quot;&quot;Case2 :Subtraction&quot;&quot;&quot;</span>
+        <span class="s1">print(</span><span class="s4">''</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">'******test_subtract******'</span><span class="s1">)</span>
+        <span class="s2">for </span><span class="s1">row </span><span class="s2">in </span><span class="s1">test_data_row_list:</span>
+            <span class="s1">x = row[</span><span class="s5">0</span><span class="s1">]</span>
+            <span class="s1">y = row[</span><span class="s5">1</span><span class="s1">]</span>
+            <span class="s3"># the fourth column in the text line is (x - y) value.</span>
+            <span class="s1">expect_result = row[</span><span class="s5">3</span><span class="s1">]</span>
+            <span class="s3"># result = self.calculator.minus(x, y)</span>
+            <span class="s1">calc = Calculator()</span>
+            <span class="s1">result = calc.subtraction(x</span><span class="s2">, </span><span class="s1">y)</span>
+
+            <span class="s1">print(str(x) + </span><span class="s4">' - ' </span><span class="s1">+ str(y) + </span><span class="s4">' = ' </span><span class="s1">+ str(result) + </span><span class="s4">', expect ' </span><span class="s1">+ str(expect_result))</span>
+            <span class="s1">self.assertEqual(float(result)</span><span class="s2">, </span><span class="s1">float(expect_result))</span>
+
+    <span class="s2">def </span><span class="s1">test_0003_multiply(self):</span>
+        <span class="s0">&quot;&quot;&quot;Case4 :Multiplication&quot;&quot;&quot;</span>
+        <span class="s1">print(</span><span class="s4">''</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">'******test_multiple******'</span><span class="s1">)</span>
+        <span class="s2">for </span><span class="s1">row </span><span class="s2">in </span><span class="s1">test_data_row_list:</span>
+            <span class="s1">x = row[</span><span class="s5">0</span><span class="s1">]</span>
+            <span class="s1">y = row[</span><span class="s5">1</span><span class="s1">]</span>
+            <span class="s3"># the fifth column in the text line is (x * y) value.</span>
+            <span class="s1">expect_result = row[</span><span class="s5">4</span><span class="s1">]</span>
+            <span class="s1">calc = Calculator()</span>
+            <span class="s1">result = calc.multiplication(x</span><span class="s2">, </span><span class="s1">y)</span>
+            <span class="s3"># result = self.calculator.multiple(x, y)</span>
+
+            <span class="s1">print(str(x) + </span><span class="s4">' * ' </span><span class="s1">+ str(y) + </span><span class="s4">' = ' </span><span class="s1">+ str(result) + </span><span class="s4">', expect ' </span><span class="s1">+ str(expect_result))</span>
+            <span class="s1">self.assertEqual(float(result)</span><span class="s2">, </span><span class="s1">float(expect_result))</span>
+
+    <span class="s2">def </span><span class="s1">test_0004_division(self):</span>
+        <span class="s0">&quot;&quot;&quot;Case5 :Division&quot;&quot;&quot;</span>
+        <span class="s1">print(</span><span class="s4">''</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">'******test_divide******'</span><span class="s1">)</span>
+        <span class="s2">for </span><span class="s1">row </span><span class="s2">in </span><span class="s1">test_data_row_list:</span>
+            <span class="s1">x = row[</span><span class="s5">0</span><span class="s1">]</span>
+            <span class="s1">y = row[</span><span class="s5">1</span><span class="s1">]</span>
+            <span class="s3"># the sixth column in the text line is (x / y) value.</span>
+            <span class="s1">expect_result = row[</span><span class="s5">5</span><span class="s1">]</span>
+            <span class="s1">calc = Calculator()</span>
+            <span class="s1">result = calc.division(x</span><span class="s2">, </span><span class="s1">y)</span>
+            <span class="s1">print(str(x) + </span><span class="s4">' % ' </span><span class="s1">+ str(y) + </span><span class="s4">' = ' </span><span class="s1">+ str(result) + </span><span class="s4">', expect ' </span><span class="s1">+ str(expect_result))</span>
+            <span class="s1">self.assertEqual(float(result)</span><span class="s2">, </span><span class="s1">float(expect_result))</span>
+
+
+<span class="s1">kwargs = {</span>
+    <span class="s4">&quot;output&quot;</span><span class="s1">: </span><span class="s4">'reports'</span><span class="s2">,</span>
+    <span class="s4">&quot;report_name&quot;</span><span class="s1">: </span><span class="s4">'report_name'</span><span class="s2">,</span>
+    <span class="s4">&quot;failfast&quot;</span><span class="s1">: </span><span class="s2">True</span>
+
+<span class="s1">}</span>
+<span class="s1">report_result = HTMLTestRunner(**kwargs).run(build_test_suite())</span>
+</pre>
+</body>
+</html>

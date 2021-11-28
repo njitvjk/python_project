@@ -36,11 +36,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <!--                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">HOME</a></li>-->
-                <li class="nav-item"><a class="nav-link" href="history.html">BASICS</a></li>
-                <li class="nav-item"><a class="nav-link" href="browserwars1.html">OOPS</a></li>
-                <li class="nav-item"><a class="nav-link" href="ecommerce.html">TESTING</a></li>
-                <li class="nav-item"><a class="nav-link" href="socialnetworking.html">SOLID</a></li>
-                <li class="nav-item"><a class="nav-link" href="socialnetworking.html">GLOSSARY</a></li>
+                <li class="nav-item"><a class="nav-link" href="basics.html">PYTHON BASICS</a></li>
+                <li class="nav-item"><a class="nav-link" href="OOPS.html">OOPS</a></li>
+                <li class="nav-item"><a class="nav-link" href="pylint.html">PYLINT</a></li>
+                <li class="nav-item"><a class="nav-link" href="testing.html">TESTING</a></li>
+                <li class="nav-item"><a class="nav-link" href="SOLID.html">SOLID</a></li>
+                <li class="nav-item"><a class="nav-link" href="glossary.html">GLOSSARY</a></li>
 <!--                <li class="nav-item"><a class="nav-link" href="searchengine.html"></a></li>-->
 <!--                <li class="nav-item"><a class="nav-link" href="testing.html">INTERNET ELEMENTS</a></li>-->
             </ul>
@@ -49,7 +50,7 @@
 </nav>
 <!-- Hero section-->
 <div class="container bg-grey mt-2">
-    <h5 class="display-6 text-center ">Unit tests detect changes that may break a design contract</h5>
+    <h5 class="display-6 text-center ">Indentation is mandatory with Python </h5>
     <!--  <p class="lead"></p>-->
 </div>
 
@@ -65,9 +66,9 @@
                 <!-- Post header-->
                 <header class="mb-4">
                     <!-- Post title-->
-                    <h2 class="fw-bolder mb-1">Design Patterns in Python </h2>
+                    <h2 class="fw-bolder mb-1" id="getting_started">Design Patterns in Python </h2>
                     <!-- Post meta content-->
-                    <div class="text-muted fst-italic mb-2">Posted on November 23, 2021 by Now-U-Know. Image Credit:Kowsalya Vijayan</a></div>
+                    <div class="text-muted fst-italic mb-2">Posted on November 23, 2021 by Now-U-Know. Image Credit:<a href="https://refactoring.guru/design-patterns/python">RefactoringGuru.com</a></div>
                     <!-- Post categories-->
                     <!--                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>-->
                     <!--                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>-->
@@ -90,7 +91,7 @@
 
                         </div>
                         <p>Patterns are often confused with algorithms, because both concepts describe typical solutions to some known problems. While an algorithm always defines a clear set of actions that can achieve some goal, a pattern is a more high-level description of a solution. The code of the same pattern applied to two different programs may be different.</p>
-                        <h6 class=text-muted><i>Creational Design Pattern:</i></h6>
+                        <h6 class=text-muted id="ds1"><i>Creational Design Pattern:</i></h6>
                         <p>Creational patterns provide various object creation mechanisms, which increase flexibility and reuse of existing code.</p>
 
                         <ul style="padding-left:50px "><li><p><i>Factory Method</i>-Provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.
@@ -104,7 +105,7 @@
 
 
 
-                        <h6 class=text-muted><i>Structural Design Patterns:</i></h6>
+                        <h6 class=text-muted id="ds2"><i>Structural Design Pattern:</i></h6>
                         <ul style="padding-left:50px "><li><p>Structural patterns explain how to assemble objects and classes into larger structures while keeping these structures flexible and efficient.</p></li>
                             <li><p><i>Bridge</i>-lets you split a large class or a set of closely related classes into two separate hierarchies—abstraction and implementation—which can be developed independently of each other.</p></li>
                             <li><p><i>Composite</i>-lets you compose objects into tree structures and then work with these structures as if they were individual objects.</p></li>
@@ -115,7 +116,7 @@
 
                             </ul>
 
-                        <h6 class=text-muted><i>Behavioral Design Patterns:</i></h6>
+                        <h6 class=text-muted id="ds3"><i>Behavioral Design Pattern:</i></h6>
                         <ul style="padding-left:50px "><li><p>Behavioral design patterns are concerned with algorithms and the assignment of responsibilities between objects.</p></li>
                             <li><p><i>Chain of Responsibility</i>- lets you pass requests along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain.</p></li>
                             <li><p><i>Command</i>-turns a request into a stand-alone object that contains all information about the request. This transformation lets you pass requests as a method arguments, delay or queue a request’s execution, and support undoable operations.</p></li>
@@ -130,27 +131,26 @@
 
                         <h6 ><i>Detailed Explanation</i></h6>
                         <p> We are now going to pick two topics: <b>Factory</b> and <b>Facade</b> Method and let us see its details.</p>
-                        <h6 class=text-muted><i>Factory Method</i></h6>
+                        <h6 class=text-muted id="factory"><i>Factory Method</i></h6>
                         <p>Factory Method is a creational design pattern that provides an interface for creating objects in a superclass, but allows subclasses to alter the type of objects that will be created.</p>
 
                             <img class="img-fluid rounded mb-2 " src="assets/glossary/structure.png" alt="..." />
-                            <p><li>The <i>Product</i> declares the interface, which is common to all objects that can be produced by the creator and its subclasses.</li>
-                            <li><i>Concrete Products</i> are different implementations of the product interface.</li>
-                            <li>The<i> Creator</i> class declares the factory method that returns new product objects. It’s important that the return type of this method matches the product interface.</li>
-                            <li><i>Concrete Creators</i> override the base factory method so it returns a different type of product.</li>
+                            <ul style="padding-left:50px "> <li><p>The <i>Product</i> declares the interface, which is common to all objects that can be produced by the creator and its subclasses.</p></li>
+                            <li><p><i>Concrete Products</i> are different implementations of the product interface.</p></li>
+                            <li><p><i> Creator</i> class declares the factory method that returns new product objects. It’s important that the return type of this method matches the product interface.</li>
+                            <li><p><i>Concrete Creators</i> override the base factory method so it returns a different type of product.</p></li></ul>
 
-                            The factory method doesn’t have to create new instances all the time. It can also return existing objects from a cache, an object pool, or another source.</p>
+                        <p>The factory method doesn’t have to create new instances all the time. It can also return existing objects from a cache, an object pool, or another source.</p>
 
-                        <h6 class=text-muted><i>Facade </i></h6>
+                        <h6 class=text-muted id="facade"><i>Facade </i></h6>
                         <p>Facade is a structural design pattern that provides a simplified interface to a library, a framework, or any other complex set of classes.A facade is a class that provides a simple interface to a complex subsystem which contains lots of moving parts. A facade might provide limited functionality in comparison to working with the subsystem directly. However, it includes only those features that clients really care about.</p>
                         <img class="img-fluid rounded mb-2 " src="assets/glossary/facade.png" alt="..." />
-                        <p><ul><li>The <i>Facade </i>provides convenient access to a particular part of the subsystem’s functionality. It knows where to direct the client’s request and how to operate all the moving parts.</li>
+                        <p><ul style="padding-left:50px "><li>The <i>Facade </i>provides convenient access to a particular part of the subsystem’s functionality. It knows where to direct the client’s request and how to operate all the moving parts.</li>
                         <li>An <i>Additional Facade </i> class can be created to prevent polluting a single facade with unrelated features that might make it yet another complex structure. Additional facades can be used by both clients and other facades.</li>
                         <li>The<i> Complex Subsystem</i> consists of dozens of various objects. To make them all do something meaningful, you have to dive deep into the subsystem’s implementation details, such as initializing objects in the correct order and supplying them with data in the proper format.
                         <br>Subsystem classes aren’t aware of the facade’s existence. They operate within the system and work with each other directly.
                         </li>
                         <li>The <i>Client</i> uses the facade instead of calling the subsystem objects directly.</li></ul>
-                        </p>
 
 
 
@@ -166,37 +166,44 @@
 
         <div class="col-lg-4 mt-4">
             <!-- Search widget-->
-            <div class="card mb-4 mt-7 ">
+            <div class="card mb-4 mt-7 bg-grey ">
                 <h5 class="highlight header-colorize text-uppercase ">Table of contents</h5>
-                <div class="card-body  header-colorize text-center"><a href="internetelement2.html">AAA Pattern for python testing </a></div>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#getting_started">Introduction </a></p>
 
-                <div class="card-body header-colorize text-center"><a href="internetelement2.html">Pytest and Coverage </a></div>
-                <div class="card-body  header-colorize text-center"><a href="internetelement2.html">Continuous Integration</a></div>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#ds1">Creational Design Pattern</a></p>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#ds2">Structural Design Pattern</a></p>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#ds3">Behavioral Design Pattern</a></p>
+
+                <p class="header-colorize " style="padding-left: 90px"><a href="#factory">Factory Method</a></p>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#facade">Facade Method</a></p>
+
+
+
 
             </div>
             <div class="card mb-4 ">
                 <div class="card-header text-md-center text-center">Code Repositories for Hand On training</div>
                 <div class="card-body">
-                    <div class="row ">
+                    <div class="row " style="padding-left: 60px">
                         <!--                        <div class="col-md-6">-->
                         <!--                            <ul class="list-inline-item  mb-0">-->
-                        <p class="text-center"><a href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/">Simple Calculator Program with Unittest</a></p>
-                        <p class="text-center"><a href="https://pypi.org/project/flake8-aaa/">Improved Calculator Version with AAA</a></p>
-                        <p class="text-center"><a href="https://learnbyexample.gitbooks.io/python-basics/content/Testing.html">AAA testing with External data </a><p>
-                        <!--                        </div>-->
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/python_concepts">python_basic_concepts</a></p>
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/SOLID">Understanding SOLID principles</a></p>
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/branch1">AAA testing with External data</a></p>
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/calc_part2">OOPS concepts using Calculator Program</a></p>
+                        <p ><a href="  https://github.com/njitvjk/calc2/tree/calc_part3">Calculator Program with tuples</a></p>
+
                     </div>
                 </div>
             </div>
             <div class="card mb-4 ">
                 <div class="card-header text-md-center text-center">Online Resources</div>
                 <div class="card-body">
-                    <div class="row ">
-<!--                        <div class="col-md-6">-->
-                            <!--                            <ul class="list-inline-item  mb-0">-->
-                            <p class="text-center"><a href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/">Blog from Automation panda</a></p>
-                            <p class="text-center"><a href="https://pypi.org/project/flake8-aaa/">flake8-aaa</a></p>
-                            <p class="text-center"><a href="https://learnbyexample.gitbooks.io/python-basics/content/Testing.html">Testing Basics from GitBooks</a><p>
-<!--                        </div>-->
+                    <div class="row " style="padding-left: 70px">
+                        <p ><a href="https://www.programiz.com/python-programming">Python for beginners</a></p>
+                        <p ><a href="https://www.python.org/">Official Python Website</a></p>
+                        <p ><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Wikipedia-Python</a><p>
+                        <!--                        </div>-->
                     </div>
                 </div>
             </div>
@@ -215,7 +222,7 @@
         <div class="container">
             <p class="m-0 text-center text-white">Copyright &copy; Kowsalya_Vijayan 2021</p>
             <p class="m-0 text-center text-white">
-                <a href="https://github.com/njitvjk/internethistory_project" >Project Repo</a><span></span>
+                <a href="https://github.com/njitvjk/python_project" >Project Repo</a><span></span>
                 <a href="http://validator.w3.org/check/referer"><img src="https://www.w3.org/Icons/valid-html401-blue" alt=""></a></p>
 
         </div>
