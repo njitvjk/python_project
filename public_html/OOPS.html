@@ -38,6 +38,7 @@
                 <!--                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">HOME</a></li>-->
                 <li class="nav-item"><a class="nav-link" href="basics.html">PYTHON BASICS</a></li>
                 <li class="nav-item"><a class="nav-link" href="OOPS.html">OOPS</a></li>
+                <li class="nav-item"><a class="nav-link" href="pylint.html">PYLINT</a></li>
                 <li class="nav-item"><a class="nav-link" href="testing.html">TESTING</a></li>
                 <li class="nav-item"><a class="nav-link" href="SOLID.html">SOLID</a></li>
                 <li class="nav-item"><a class="nav-link" href="glossary.html">GLOSSARY</a></li>
@@ -65,9 +66,9 @@
                 <!-- Post header-->
                 <header class="mb-4">
                     <!-- Post title-->
-                    <h2 class="fw-bolder mb-1">OOPS concept in Python </h2>
+                    <h2 class="fw-bolder mb-1" id="getting_started">OOPS concept in Python </h2>
                     <!-- Post meta content-->
-                    <div class="text-muted fst-italic mb-2">Posted on November 23, 2021 by Now-U-Know. Image Credit:Kowsalya Vijayan</a></div>
+                    <div class="text-muted fst-italic mb-2">Posted on November 23, 2021 by Now-U-Know. Image Credit:Kowsalya Vijayan</div>
                     <!-- Post categories-->
                     <!--                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>-->
                     <!--                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>-->
@@ -92,7 +93,7 @@
                         </div>
                         <p>This programming approach uses objects and classes.The objects are real world entities where as Classes represents the objects with properties and behaviour. Check <a href="glossary.html">Glossary </a>to learn about objects and classes and much more concepts on OOPS.</p>
                         <p>Let us demonstrate the principles using a calculator program</p>
-                        <h5 class=text-muted><i>Inheritance</i></h5>
+                        <h5 class=text-muted id="Inheritance"><i>Inheritance</i></h5>
                         <p> <i>Inheritance</i> refers to defining a new class with less or no modification to an existing class. The new class is called <i>derived class</i> and from one which it inherits is called the <i>base</i>. Python supports also supports <i>multiple inheritances</i>. </p>
 <!--                        <div class="col">-->
                         <p>Syntax:</p>
@@ -112,26 +113,26 @@
 
                         </ul>
                         <p>Now,let us take an example of single inheritance using an addition operation for calculator</p>
-                        <iframe src="source_code/oops/calculation_base.py.html" class="targetframe" style="height:350px" ;>
+                        <iframe src="source_code/oops/calculation_base.py.html" class="targetframe" style="height:350px" >
                         </iframe>
                         <p> The class <i>Calculation_base</i> is the base class which maintains the variables for calculation and get method to access those variables.</p>
                         <p>Now let us define a Child Class called <i>Addition</i> Note the syntax of extending the parent class.</p>
                         <p> The <i>Addition</i> class can use the <i>Calculation_base</i> class methods.It uses <i>get_value_a</i> and <i>get_value_b</i> to access the variables of Parent class. </p>
-                        <iframe src="source_code/oops/addition.py.html" class="targetframe" style="border:none" ;>
+                        <iframe src="source_code/oops/addition.py.html" class="targetframe" style="border:none" >
                         </iframe>
 
                         <p></p>
-                        <h5 class="text-muted">Polymorphism</h5>
+                        <h5 class="text-muted" id="polymorphism">Polymorphism</h5>
                         <p>Polymorphism defines the ability to take different forms. Polymorphism in Python allows us to define methods in the child class with the same name as defined in their parent class.</p>
                         <p>There are two types of polymorphism</p>
-                        <ul><li><i>Compile-time Polymorphism: </i>A compile-time polymorphism also called as static polymorphism which gets resolved during the compilation time of the program. One common example is <i>“method overloading”. </i></li></ul>
+                        <ul style="padding-left:50px "><li><i>Compile-time Polymorphism: </i>A compile-time polymorphism also called as static polymorphism which gets resolved during the compilation time of the program. One common example is <i>“method overloading”. </i></li></ul>
                         <img class="img-fluid rounded mb-2" src="assets/OOPS/polymorphism-1.JPG" alt="..." />
-                        <p>This seems to be constructor over loading.Since the<i>Addition </i> class is the child of <i>Calculation Base</i> Any object calling the addition Class can pass a method with two arguments or method with three arguments.</p>
+                        <p>This seems to be constructor over loading.Since the <i>Addition </i> class is the child of <i>Calculation Base</i> Any object calling the addition Class can pass a method with two arguments or method with three arguments.</p>
                         <div class="code_section">
 
-                            <span class="p">add=Addition( </span><span class="sl">1</span> , <span class="sl">2</span> )</span><br>
+                            <span class="p">add=Addition( <span class="sl">1</span> , <span class="sl">2</span> )</span><br>
                             <span class="p">3</span><br>
-                            <span class="p">add=Addition( </span><span class="sl">1</span> , <span class="sl">2</span> , <span class="sl">3</span> )</span><br>
+                            <span class="p">add=Addition( <span class="sl">1</span> , <span class="sl">2</span> , <span class="sl">3</span> )</span><br>
                             <span class="p">6</span>
 
                         </div>
@@ -139,7 +140,7 @@
                         <p> Another example of static polymorphism is the <i>Operator overloading</i></p>
                         <img class="img-fluid rounded mb-2" src="assets/OOPS/poly-3.JPG" alt="..." />
                         <p><i>"+"</i> can be used both for performing arithmetic addition and used for string concatenation</p>
-                        <ul><li><i>Run-time Polymorphism: </i>A run-time Polymorphism is also, called as dynamic polymorphism where it gets resolved into the run time. One common example of Run-time polymorphism is <i>“method overriding”. </i></li></ul>
+                        <ul style="padding-left:50px "><li><i>Run-time Polymorphism: </i>A run-time Polymorphism is also, called as dynamic polymorphism where it gets resolved into the run time. One common example of Run-time polymorphism is <i>“method overriding”. </i></li></ul>
                         <p>Now we define a method in Parent class <i>Calculation_base</i></p>
                         <img class="img-fluid rounded mb-2" src="assets/OOPS/poly_parent.JPG" alt="..." />
                         <p> We can override the same method in child <i>Addition</i> to perform a different operation</p>
@@ -148,12 +149,13 @@
                         <p>Output:</p>
                         <div class="code_section">
 
-                            <span class="p">Performing Addition</span><br>
+                            <span class="p">Performing Addition</span>
+
 
                         </div>
 
 
-                        <h5 class="text-muted">Encapsulation</h5>
+                        <h5 class="text-muted" id="encapsulation">Encapsulation</h5>
                         <p><i>Encapsulation</i> basically means binding up of data in a single class. Python does not have any private keyword, unlike Java. A class shouldn’t be directly accessed but be prefixed in an underscore.
                         </p>
                         <p>Encapsulation is the packing of data and functions that work on that data within a single object. By doing so, you can hide the internal state of the object from the outside. This is known as information hiding.</p>
@@ -161,20 +163,20 @@
                         <p>By convention, you can define a private attribute by prefixing a single underscore (_):The private variables can be accessed through <i>Set</i> and <i>get</i> methods</p>
                         <p>Prefix an attribute with double underscores (__) to use the name mangling.Python will automatically change the name of the <i>__attribute </i>to:<i>_class__attribute</i></p>
                         <p>Let us again take a look at the <i>Calculation_base</i></p>
-                        <iframe src="source_code/oops/calculation_base.py.html" class="targetframe" style="height:350px" ;>
+                        <iframe src="source_code/oops/calculation_base.py.html" class="targetframe" style="height:350px" >
                         </iframe>
                         <p> <i> value_a</i> and <i>value_b</i> are private variables and they cannot be accessed directly by the inheriting classes.The example program have get method.
                         You can also use set methods to set the variables , if your program logic needs it.</p>
                         <p> Below code snippet shows, how the Addition class access the variables and uses for addition operation.</p>
                         <img class="img-fluid rounded mb-2" src="assets/OOPS/encap.JPG" alt="..." />
                         <p></p>
-                        <h5 class="text-muted">Abstraction</h5>
+                        <h5 class="text-muted" id="Abstraction">Abstraction</h5>
                         <p><i>Abstraction</i> focuses on hiding the internal implementations of a process or method from the user. In this way, the user knows what he is doing but not how the work is being done.Through the process of abstraction in Python, a programmer can hide all the
                             irrelevant data/process of an application in order to reduce complexity and increase efficiency.</p>
                         <p>An abstract class cannot be instantiated which simply means you cannot create objects for this type of class. It can only be used for inheriting the functionalities.</p>
                         <p><i>Abstract Class example</i></p>
 
-                        <iframe src="source_code/oops/calculator_history.py.html" class="targetframe" style="height:350px" ;>
+                        <iframe src="source_code/oops/calculator_history.py.html" class="targetframe" style="height:350px" >
                         </iframe>
                         <p>To declare an Abstract class, we firstly need to import the <i>abc</i> module.</p>
                         <p><i>append_calculation_to_history</i> is the abstract method which wll not have implementation. Other methods are normal methods for this class.This method is annotated with marker <i>@abstractmethod</i></p>
@@ -184,7 +186,7 @@
                         <p>when you run this Program,</p>
                         <div class="code_section">
 
-                            <span class="p">add=Addition( </span><span class="sl">1</span> , <span class="sl">2</span> )</span><br>
+                            <span class="p">add=Addition( <span class="sl">1</span> , <span class="sl">2</span> )</span><br>
                             <span class="p">add.get_description()</span><br>
                             <span class="p">[3]</span>
                         </div>
@@ -207,37 +209,42 @@
 
         <div class="col-lg-4 mt-4">
             <!-- Search widget-->
-            <div class="card mb-4 mt-7 ">
+            <div class="card mb-4 mt-7 bg-grey ">
                 <h5 class="highlight header-colorize text-uppercase ">Table of contents</h5>
-                <div class="card-body  header-colorize text-center"><a href="internetelement2.html">AAA Pattern for python testing </a></div>
+                <p class="header-colorize " style="padding-left: 100px"><a href="#getting_started">Introduction </a></p>
 
-                <div class="card-body header-colorize text-center"><a href="internetelement2.html">Pytest and Coverage </a></div>
-                <div class="card-body  header-colorize text-center"><a href="internetelement2.html">Continuous Integration</a></div>
+                <p class="header-colorize " style="padding-left: 100px"><a href="#Inheritance">Inheritance </a></p>
+                <p class=" header-colorize " style="padding-left: 100px"><a href="#polymorphism">Polymorphism</a></p>
+                <p class=" header-colorize " style="padding-left: 100px"><a href="#encapsulation">Encapsulation</a></p>
+                <p class=" header-colorize " style="padding-left: 100px"><a href="#Abstraction">Abstraction</a></p>
+
+
 
             </div>
             <div class="card mb-4 ">
                 <div class="card-header text-md-center text-center">Code Repositories for Hand On training</div>
                 <div class="card-body">
-                    <div class="row ">
+                    <div class="row " style="padding-left: 60px">
                         <!--                        <div class="col-md-6">-->
                         <!--                            <ul class="list-inline-item  mb-0">-->
-                        <p class="text-center"><a href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/">Simple Calculator Program with Unittest</a></p>
-                        <p class="text-center"><a href="https://pypi.org/project/flake8-aaa/">Improved Calculator Version with AAA</a></p>
-                        <p class="text-center"><a href="https://learnbyexample.gitbooks.io/python-basics/content/Testing.html">AAA testing with External data </a><p>
-                        <!--                        </div>-->
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/python_concepts">python_basic_concepts</a></p>
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/SOLID">Understanding SOLID principles</a></p>
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/branch1">AAA testing with External data</a></p>
+                        <p><a href="https://github.com/njitvjk/Project2_crashcource/tree/calc_part2">OOPS concepts using Calculator Program</a></p>
+                        <p ><a href="  https://github.com/njitvjk/calc2/tree/calc_part3">Calculator Program with tuples</a></p>
+
                     </div>
                 </div>
             </div>
             <div class="card mb-4 ">
                 <div class="card-header text-md-center text-center">Online Resources</div>
                 <div class="card-body">
-                    <div class="row ">
+                    <div class="row " style="padding-left: 80px">
 <!--                        <div class="col-md-6">-->
-                            <!--                            <ul class="list-inline-item  mb-0">-->
-                            <p class="text-center"><a href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/">Blog from Automation panda</a></p>
-                            <p class="text-center"><a href="https://pypi.org/project/flake8-aaa/">flake8-aaa</a></p>
-                            <p class="text-center"><a href="https://learnbyexample.gitbooks.io/python-basics/content/Testing.html">Testing Basics from GitBooks</a><p>
-<!--                        </div>-->
+                        <p ><a href="https://www.programiz.com/python-programming">Python for beginners</a></p>
+                        <p ><a href="https://www.python.org/">Official Python Website</a></p>
+                        <p ><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Wikipedia-Python</a><p>
+                        <!--                        </div>-->
                     </div>
                 </div>
             </div>
@@ -256,7 +263,7 @@
         <div class="container">
             <p class="m-0 text-center text-white">Copyright &copy; Kowsalya_Vijayan 2021</p>
             <p class="m-0 text-center text-white">
-                <a href="https://github.com/njitvjk/internethistory_project" >Project Repo</a><span></span>
+                <a href="https://github.com/njitvjk/python_project" >Project Repo</a><span></span>
                 <a href="http://validator.w3.org/check/referer"><img src="https://www.w3.org/Icons/valid-html401-blue" alt=""></a></p>
 
         </div>

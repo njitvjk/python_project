@@ -38,6 +38,7 @@
                 <!--                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">HOME</a></li>-->
                 <li class="nav-item"><a class="nav-link" href="basics.html">PYTHON BASICS</a></li>
                 <li class="nav-item"><a class="nav-link" href="OOPS.html">OOPS</a></li>
+                <li class="nav-item"><a class="nav-link" href="pylint.html">PYLINT</a></li>
                 <li class="nav-item"><a class="nav-link" href="testing.html">TESTING</a></li>
                 <li class="nav-item"><a class="nav-link" href="SOLID.html">SOLID</a></li>
                 <li class="nav-item"><a class="nav-link" href="glossary.html">GLOSSARY</a></li>
@@ -67,7 +68,7 @@
                     <!-- Post title-->
                     <h2 class="fw-bolder mb-1">Glossary of python terms</h2>
                     <!-- Post meta content-->
-                    <div class="text-muted fst-italic mb-2">Posted on November 23, 2021 by Now-U-Know. Image Credit:Kowsalya Vijayan</a></div>
+                    <div class="text-muted fst-italic mb-2">Posted on November 23, 2021 by Now-U-Know. Namespace image credit:<a href="https://www.geeksforgeeks.org/python-programming-language/">GeeksforGeeks</a></div>
                     <!-- Post categories-->
                     <!--                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>-->
                     <!--                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>-->
@@ -78,39 +79,40 @@
 
                 <section class="mb-5">
                     <div class="row">
-<!--                        <div class="col">-->
+<!--                        <div class="col-lg-7">-->
 
 
-<!--                            <img class="img-fluid rounded mb-2" src="assets/glossary/glossary.JPG" alt="..." />-->
+<!--                           <img class="img-fluid rounded mb-2" src="assets/glossary/glossary.JPG" alt="..." />-->
 
 <!--                        </div>-->
-                        <div class="col text-align:justify">
+<!--                        <div class="col ">-->
 
-                            <p style="text-align:justify">Python’s design emphasizes code readability with its use of indentation. Its data structures as well as its object-oriented approach helps programmers write clear, logical code for small to large scale projects.
-                            Listed below are terms and terminologies used in Python.Additional information can be found from the website <a href ="https://www.python.org/">www.python.org</a>
-                            </p>
+<!--                            <p style="text-align:justify">Python’s design emphasizes code readability with its use of indentation. Its data structures as well as its object-oriented approach helps programmers write clear, logical code for small to large scale projects.-->
+<!--                            Listed below are terms and terminologies used in Python.Additional information can be found from the website <a href ="https://www.python.org/">www.python.org</a>-->
+<!--                            </p>-->
 
-                            </div>
+<!--                            </div>-->
 
                         <br>
                         <div class="row  ">
-                        <h6 ><i>Namespaces</i></h6>
+                        <h6 id="namespace" ><i>Namespaces</i></h6>
                         <p><i>A<b> namespace</b></i>  is a system that has a unique name for each and every object in Python. An object might be a variable or a method. </p>
 
 
 
-                            <div class="col"><img class="img-fluid rounded mb-2 " src="assets/glossary/types_namespace-1.png" alt="..." /></div>
                             <div class="col">
-
-                                <p style="text-align:justify">Python itself maintains a namespace in the form of a Python dictionary.
-                                When Python interpreter runs solely without any user-defined modules, methods, classes, etc. Some functions like print(), id() are always present, these are built-in namespaces. When a user creates a module, a global namespace gets created, later the creation of local functions creates the local namespace. The built-in namespace encompasses the global namespace and the global namespace encompasses the local namespace.</p>
+                                <img class="img-fluid rounded mb-2 " src="assets/glossary/types_namespace-1.png" alt="..." />
                             </div>
-                            <p>example</p>
+                            <div class="col-md-4">
+
+                                <p style="text-align:justify">Python itself maintains a namespace in the form of a Python dictionary..When Python interpreter runs solely without any user-defined modules, methods, classes, etc. Some functions like print(), id() are always present, these are built-in namespaces. When a user creates a module, a global namespace gets created, later the creation of local functions creates the local namespace. The built-in namespace encompasses the global namespace. </p>
+                            </div>
+                            <p class="text-muted">Below you can see an example of namespace</p>
                             <div class="col">
                             <img class="img-fluid rounded mb-2 " src="assets/glossary/namespace.JPG" alt="..."/></div>
                             <div></div>
                             <hr>
-                            <h6 ><i>Type cast</i></h6>
+                            <h6 id="typecast" ><i>Type cast</i></h6>
                             <p>Converting one data type to another data type is called typecasting.For example, you want to add two numbers in which one existing value of a variable is an integer and the second is a string. </p>
 
 
@@ -123,37 +125,37 @@
 
                             <div class="col">
 
-                                <p style="text-align:justify">There are some functions which used for Python type casting:
-                                <li>int(): is used to specify integer literal.Construct an integer number from a string literal and Float.</li>
+                                <p style="text-align:justify">There are some functions which used for Python type casting:</p>
+                                <ul style="padding-left:50px "><li>int(): is used to specify integer literal.Construct an integer number from a string literal and Float.</li>
                                 <li>str(): is used to specify the string literal. Construct a string type from an integer literal OR  float literal.</li>
-                                <li>float(): is used to specify the float data types. Construct float literal from integer </li></p>
+                                <li>float(): is used to specify the float data types. Construct float literal from integer </li></ul>
 
 
-                                </p>                                <!--                            <p>IPv6 is the most recent version of the Internet Protocol. This new IP address version is being deployed to fulfil the need for more Internet addresses. It was aimed to resolve issues that are associated with IPv4. With 128-bit address space, it allows 340 undecillion unique address space. DNS and IPs are designed to scale.</p>-->
+                                                          <!--                            <p>IPv6 is the most recent version of the Internet Protocol. This new IP address version is being deployed to fulfil the need for more Internet addresses. It was aimed to resolve issues that are associated with IPv4. With 128-bit address space, it allows 340 undecillion unique address space. DNS and IPs are designed to scale.</p>-->
                             </div>
                             <p>and string literal. String value cannot be added with the integer value. Therefore, it is not possible to add without Typecasting.</p>
 
                             <hr>
 
-                            <h6><i>Type hint</i></h6>
+                            <h6 id="typehint"><i>Type hint</i></h6>
                             <p>Type hinting is a solution to indicate the type of a value within your Python code.From the example,the <i>name: str </i>syntax indicates the name argument should be of type str. The -> syntax indicates <i>the greet()</i> function will return a string.</p>
-                            <div class="col">
+                            <div class="col-lg-6">
                             <img class="img-fluid rounded mb-2 " src="assets/glossary/type-hinting.JPG" alt="..." />
                             </div>
                             <div class="col">
 
-                                <p style="text-align:justify"> Here’s how you can add type hints to function:
-                                <li>Add a colon and a data type after each function parameter</li>
-                                <li>Add an arrow (->) and a data type after the function to specify the return data type</li>
+                                <p style="text-align:justify"> Here’s how you can add type hints to function:</p>
+                                <ul style="padding-left:50px "><li>Add a colon and a data type after each function parameter</li>
+                                <li>Add an arrow (->) and a data type after the function to specify the return data type</li></ul>
 
-                                </p>
+
                             </div>
                             <p>by using type hint, you are helping A third person viewing your code who will know what is expected where, also Development Environments will be better suited at suggesting appropriate methods when know what type your object is.
 
                             </p>
 
                         <hr>
-                            <h6><i>Objects and Classes</i></h6>
+                            <h6 id="objects"><i>Objects and Classes</i></h6>
                             <p>Object is a real world entity such as pen, laptop, mobile, bed, keyboard, mouse, chair etc.In OOPS terminology, Object is an instance of a class. Class is a blueprint or template from which objects are created.</p>
                             <div class="col">
                                 <div class="code_section">
@@ -170,7 +172,7 @@
                             <p>restaurant is the object of class Restaurant.Now, we are going to show how to build the class and objects of Restaurants </p>
 
 
-                            <iframe src="source_code/restaurant.py.html" id="targetframe3" class="targetframe" style="border: none" ;>
+                            <iframe src="source_code/restaurant.py.html" id="targetframe3" class="targetframe" style="border: none" >
                             </iframe>
                             <p> Output:</p>
                             <p>Note how the object is instantiated and used to call the class.Read below to understand on instantiation, constructors,methods and properties</p>
@@ -179,27 +181,36 @@
                             </div>
 
 
-                            <h6 class=text-muted><i>Instantiation</i></h6>
-                            <p>In object-oriented programming, some writers say that you instantiate a class to create an object, a concrete instance of the class. The object is an executable file that you can run in a computer.
+                            <h6 class=text-muted id="instance"><i>Instantiation</i></h6>
+                            <p style="text-align:justify">In object-oriented programming, some writers say that you instantiate a class to create an object, a concrete instance of the class. The object is an executable file that you can run in a computer.
                                 To instantiate is to create such an instance by, for example, defining one particular variation of object within a class, giving it a name.In the above Restaurant program, we have created an instance object <i>restaurant</i></p>
-                            <h6 class=text-muted><i>Methods</i></h6>
-                            <p>A function that's part of a class ia a method.They are used to define the behaviors of an object. If you closely notice the restaurant program above,  <i>get_descriptive_name</i>, <i>read_restaurant_rating</i>,<i>update_restaurant_rating</i> .These are called instance methods because they are called on an instance object i.e restaurant.</p>
-                            <p>The <i>__init__()</i> method is a special method that the python runs automatically whenever we create a new instance based on the <i>Restaurant</i> class.This method has a leading underscores and two trailing underscores, a convention that helps prevent python's default method names from conflicting with other methods.</p>
-                            <h6 class=text-muted><i>Attributes or properties of the class</i></h6>
-                            <p>Variables that are accessed through instances are called <i>attributes </i>.In the above example <i>restaurant_name</i>, <i>restaurant_location</i> ,<i>restaurant_rating</i> ,<i>cuisine_type</i> are the properties of the class Restaurant.</p>
+                            <h6 class=text-muted id="methods"><i>Methods</i></h6>
+
+                            <p style="text-align:justify">A function that's part of a class ia a method.They are used to define the behaviors of an object.</p>
+                                If you closely notice the restaurant program above,
+                                <ul style="padding-left:50px "><li><p><i>get_descriptive_name</i></p></li>
+                                <li><p><i>read_restaurant_rating</i></p></li>
+                                <li><p><i>update_restaurant_rating</i></p>
+                                </li></ul>
+                            <p style="text-align:justify">These are called instance methods because they are called on an instance object i.e restaurant.</p>
+                            <p style="text-align:justify">The <i>__init__()</i> method is a special method that the python runs automatically whenever we create a new instance based on the <i>Restaurant</i> class.This method has a leading underscores and two trailing underscores, a convention that helps prevent python's default method names from conflicting with other methods.</p>
+                            <h6 class=text-muted id="property"><i>Attributes or properties of the class</i></h6>
+                            <p style="text-align:justify">Variables that are accessed through instances are called <i>attributes </i>.In the above example <i>restaurant_name</i>, <i>restaurant_location</i> ,<i>restaurant_rating</i> ,<i>cuisine_type</i> are the properties of the class Restaurant.</p>
                             <p>Any variable prefixed with <i>self</i> is available to every method in the class and also be able to access these variables through any instance created from the class.</p>
-                            <h6 class=text-muted><i>Constructors </i></h6>
-                            <p>A constructor is a special method used to create and initialize an object of a class. This method is defined in the class.
+                            <h6 class=text-muted id="constructors"><i>Constructors </i></h6>
+                            <p style="text-align:justify">A constructor is a special method used to create and initialize an object of a class. This method is defined in the class.</p>
+                            <ul style="padding-left:50px ">
                             <li>The constructor is executed automatically at the time of object creation.</li>
                             <li>The primary use of a constructor is to declare and initialize data member/ instance variables of a class. </li>
                             <li>Internally, the __new__ is the method that creates the object</li>
-                            <li>And, using the __init__() method we can implement constructor to initialize the object.</li> </p>
-                            <p>In the above restaurant file, def __init__(self, name, cuisine_type, location): method initializes the object <i>restaurant</i>. </p>
+                            <li>And, using the __init__() method we can implement constructor to initialize the object.</li>
+                            </ul>
+                            <p style="text-align:justify">In the above restaurant file, def __init__(self, name, cuisine_type, location): method initializes the object <i>restaurant</i>. </p>
 
                             <hr>
 
-                            <h6 class=text-muted><i>Class Method</i></h6>
-                            <p>Class methods are methods that are called on the class itself, not on a specific object instance. Therefore, it belongs to a class level, and all class instances share a class method.
+                            <h6 class=text-muted id="classmethod"><i>Class Method</i></h6>
+                            <p style="text-align:justify">Class methods are methods that are called on the class itself, not on a specific object instance. Therefore, it belongs to a class level, and all class instances share a class method.
 
                                </p>
 
@@ -222,8 +233,8 @@
                                     </div>
 
                                 <p>It can modify the class state by changing the value of a class variable that would apply across all the class objects.</p>
-                            <p>In Python, we use the <i>@classmethod</i> decorator to declare a method as a class method.Class methods are used when we are dealing with factory methods. Factory methods are those methods that return a class object for different use cases. </p>
-                            <iframe src="source_code/class_method.py.html" class="targetframe" style="border: none" ;>
+                            <p style="text-align:justify">In Python, we use the <i>@classmethod</i> decorator to declare a method as a class method.Class methods are used when we are dealing with factory methods. Factory methods are those methods that return a class object for different use cases. </p>
+                            <iframe src="source_code/class_method.py.html" class="targetframe" style="border: none" >
                             </iframe>
 
                             <p>Output:</p>
@@ -237,8 +248,8 @@
                             </div>
 
                             <hr>
-                            <h6 class=text-muted><i>static method</i></h6>
-                            <p>A static method is a general utility method that performs a task in isolation. Inside this method, we don’t use instance or class variable because this static method doesn’t take any parameters like self and cls.
+                            <h6 class=text-muted id="staticmethod"><i>static method</i></h6>
+                            <p style="text-align:justify">A static method is a general utility method that performs a task in isolation. Inside this method, we don’t use instance or class variable because this static method doesn’t take any parameters like self and cls.
 
 
                             <div class="col">
@@ -258,11 +269,11 @@
 
                                 <p style="text-align:justify"> Static methods are defined inside a class, and it is pretty similar to defining a regular function. </p>
                             </div>
-                            <p>In Python, we use the <i>@staticmethod</i> decorator to declare a method as a static method.A static method can’t access or modify the class state.
+                            <p style="text-align:justify">In Python, we use the <i>@staticmethod</i> decorator to declare a method as a static method.A static method can’t access or modify the class state.
 
                             </p>
                             <p>Example:</p>
-                            <iframe src="source_code/static_method.py.html" class="targetframe" style="border: none" ;>
+                            <iframe src="source_code/static_method.py.html" class="targetframe" style="border: none" >
                             </iframe>
 
                             <p>Output:</p>
@@ -279,11 +290,11 @@
                             </div>
 
                             <hr>
-                            <h6 class=text-muted><i>Unit testing</i></h6>
-                            <p>Unit testing is a software testing method by which individual units of source code are put under various tests to determine whether they are fit for use (Source). It determines the quality of your code.</p>
+                            <h6 class=text-muted id="unittesting"><i>Unit testing</i></h6>
+                            <p style="text-align:justify">Unit testing is a software testing method by which individual units of source code are put under various tests to determine whether they are fit for use (Source). It determines the quality of your code.</p>
 
 
-                            <div class="col">
+                            <div class="col-lg-6">
                                 <img class="img-fluid rounded mb-2 " src="assets/glossary/unit_test.JPG" alt="..." />
 
                             </div>
@@ -307,37 +318,55 @@
 
         <div class="col-lg-4 mt-4">
             <!-- Search widget-->
-            <div class="card mb-4 mt-7 ">
+            <div class="card mb-4 mt-7 bg-grey ">
                 <h5 class="highlight header-colorize text-uppercase ">Table of contents</h5>
-                <div class="card-body  header-colorize text-center"><a href="internetelement2.html">AAA Pattern for python testing </a></div>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#namespace">Namespaces </a></p>
 
-                <div class="card-body header-colorize text-center"><a href="internetelement2.html">Pytest and Coverage </a></div>
-                <div class="card-body  header-colorize text-center"><a href="internetelement2.html">Continuous Integration</a></div>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#typecast">Type cast</a></p>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#typehint">Type hint</a></p>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#objects">Objects and Classes</a></p>
 
+                <p class="header-colorize " style="padding-left: 90px"><a href="#instance">Instantiation</a></p>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#methods">Methods</a></p>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#property">Properties or Attributes</a></p>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#constructors">Constructors</a></p>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#classmethod">Class Method</a></p>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#staticmethod">Static Method</a></p>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#unittesting">Unit testing</a></p>
+
+
+            </div>
+            <div class="card mb-4 bg-grey ">
+                <div class="card-header text-md-center text-center">Additional Reading</div>
+                <div class="card-body">
+                    <div class="row ">
+                        <div class="card-body header-colorize" style="padding-left: 90px"><a href="design_pattern.html">Design Patterns </a></div>
+
+
+                    </div>
+                </div>
             </div>
             <div class="card mb-4 ">
                 <div class="card-header text-md-center text-center">Code Repositories for Hand On training</div>
                 <div class="card-body">
-                    <div class="row ">
-                        <!--                        <div class="col-md-6">-->
-                        <!--                            <ul class="list-inline-item  mb-0">-->
-                        <p class="text-center"><a href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/">Simple Calculator Program with Unittest</a></p>
-                        <p class="text-center"><a href="https://pypi.org/project/flake8-aaa/">Improved Calculator Version with AAA</a></p>
-                        <p class="text-center"><a href="https://learnbyexample.gitbooks.io/python-basics/content/Testing.html">AAA testing with External data </a><p>
-                        <!--                        </div>-->
+                    <div class="row " style="padding-left: 60px">
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/python_concepts">python_basic_concepts</a></p>
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/SOLID">Understanding SOLID principles</a></p>
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/branch1">AAA testing with External data</a></p>
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/calc_part2">OOPS concepts using Calculator Program</a></p>
+                        <p ><a href="  https://github.com/njitvjk/calc2/tree/calc_part3">Calculator Program with tuples</a></p>
+
                     </div>
                 </div>
             </div>
             <div class="card mb-4 ">
                 <div class="card-header text-md-center text-center">Online Resources</div>
                 <div class="card-body">
-                    <div class="row ">
-<!--                        <div class="col-md-6">-->
-                            <!--                            <ul class="list-inline-item  mb-0">-->
-                            <p class="text-center"><a href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/">Blog from Automation panda</a></p>
-                            <p class="text-center"><a href="https://pypi.org/project/flake8-aaa/">flake8-aaa</a></p>
-                            <p class="text-center"><a href="https://learnbyexample.gitbooks.io/python-basics/content/Testing.html">Testing Basics from GitBooks</a><p>
-<!--                        </div>-->
+                    <div class="row " style="padding-left: 80px">
+                        <p ><a href="https://www.programiz.com/python-programming">Python for beginners</a></p>
+                        <p ><a href="https://www.python.org/">Official Python Website</a></p>
+                        <p ><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Wikipedia-Python</a><p>
+                        <!--                        </div>-->
                     </div>
                 </div>
             </div>
@@ -356,8 +385,8 @@
         <div class="container">
             <p class="m-0 text-center text-white">Copyright &copy; Kowsalya_Vijayan 2021</p>
             <p class="m-0 text-center text-white">
-                <a href="https://github.com/njitvjk/internethistory_project" >Project Repo</a><span></span>
-                <a href="http://validator.w3.org/check/referer"><img src="https://www.w3.org/Icons/valid-html401-blue" alt=""></a></p>
+                <a href="https://github.com/njitvjk/python_project" >Project Repo</a><span></span>
+                <a href="http://validator.w3.org/check/referer"><img src="https://www.https://github.com/njitvjk/python_projectw3.org/Icons/valid-html401-blue" alt=""></a></p>
 
         </div>
     </footer>

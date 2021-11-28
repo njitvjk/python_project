@@ -38,6 +38,7 @@
                 <!--                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">HOME</a></li>-->
                 <li class="nav-item"><a class="nav-link" href="basics.html">PYTHON BASICS</a></li>
                 <li class="nav-item"><a class="nav-link" href="OOPS.html">OOPS</a></li>
+                <li class="nav-item"><a class="nav-link" href="pylint.html">PYLINT</a></li>
                 <li class="nav-item"><a class="nav-link" href="testing.html">TESTING</a></li>
                 <li class="nav-item"><a class="nav-link" href="SOLID.html">SOLID</a></li>
                 <li class="nav-item"><a class="nav-link" href="glossary.html">GLOSSARY</a></li>
@@ -65,9 +66,9 @@
                 <!-- Post header-->
                 <header class="mb-4">
                     <!-- Post title-->
-                    <h2 class="fw-bolder mb-1">Pylint </h2>
+                    <h2 class="fw-bolder mb-1" id="introduction">Pylint </h2>
                     <!-- Post meta content-->
-                    <div class="text-muted fst-italic mb-2">Posted on November 23, 2021 by Now-U-Know. Image Credit:Kowsalya Vijayan</a></div>
+                    <div class="text-muted fst-italic mb-2">Posted on November 23, 2021 by Now-U-Know. Image Credit:Kowsalya Vijayan</div>
                     <!-- Post categories-->
                     <!--                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>-->
                     <!--                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>-->
@@ -112,7 +113,7 @@
                     <div class="row  ">
 
                         <div class="col">
-                            <h5 class="font-weight-bold">Pylint installation</h5>
+                            <h5 class="font-weight-bold" id="installation">Pylint installation</h5>
 <!--                            <h6 class=text-muted><i>Step1:Install</i></h6>-->
                             <div class="col">
                                 <div class="code_section">
@@ -122,9 +123,9 @@
                             </div>
 
                             <br>
-                            <h5 class="font-weight-bold">Getting started</h5>
+                            <h5 class="font-weight-bold" id="getting_started">Getting started</h5>
                             <p>Pylint can tell you where you may have gone wrong and point you in the direction to figure out what you have done and how to do better.</p>
-                            <p>simply type <b>pylint</b> in your terminal.Running Pylint with no arguments will invoke the help dialogue and give you an idea of the arguments available to you:<</b></p>
+                            <p>simply type <b>pylint</b> in your terminal.Running Pylint with no arguments will invoke the help dialogue and give you an idea of the arguments available to you:</p>
                             <img class="img-fluid rounded mb-2" src="assets/pylint/pylint_help1.JPG" alt="..." />
                             <p>Pay attention to <i><b>Commands </b>, <b>Reports</b> & <b>Message control</b></i></p>
 
@@ -134,13 +135,12 @@
                             <img class="img-fluid rounded mb-2" src="assets/pylint/pylint.messages.JPG" alt="..." />
                             <br>
                             <br>
-                            <h5 class="font-weight-bold">Best Practises and Tips for new Programmers</h5>
+                            <h5 class="font-weight-bold" id="tips">Best Practises and Tips for new Programmers</h5>
                             <p>The following guidelines helps to write clear code with the goal of improving readability. Code is read much more often than is written that is why is so important to stick to conventions that will help us or other people to understand more easily the available code.</p>
                             <p class="text-muted"><i>Operators</i></p>
                             <p>Always surround these operators with a single space on either side:</p>
-                            <ul><li>Assignment (=)</li>
-                                <li>Augmented assignment (+=, -=, etc)</li>
-                                <li>Comparison operators (<, >, <=, >=, ==, !=)</li>
+                            <ul><li>Assignment </li>
+                                <li>Comparison operators </li>
                                 <li>Logical operators (and, or, not)</li>
                                 <li>Membership operators (in, not in)</li>
                                 <li>Identity operators (is, not is)</li>
@@ -156,16 +156,16 @@
                             <p>when you write try and except blocks in your code. Do not leave your except bare.Instead ,We should specify which error we want to handle in the except block as</p>
 
                             <p class="text-muted"><i>Boolean variables </i></p>
-                            <p>It is a bad practise to compare a boolean variable to <i>True</i> or <i>False</i> in if statements comparison to True should be just the expression ex. <i>if(is_true)</i> </b></p>
+                            <p>It is a bad practise to compare a boolean variable to <i>True</i> or <i>False</i> in if statements comparison to True should be just the expression ex. <i>if(is_true)</i> </p>
 
                             <p class="text-muted"><i>Import</i></p>
                             <p>Imports are written in separated lines, and are grouped in the correct order.
                             </p>
 
-                            <h5 class="font-weight-bold">Running Calculator test using pylint</h5>
+                            <h5 class="font-weight-bold" id="testrun">Running Calculator test using pylint</h5>
                             <p class="text-muted"> Calculator_test file</p>
                             <a href="#link" onclick="$('iframe#targetframe').toggle()">Calculator_test.py</a><br />
-                            <iframe src="source_code/calculator_test_oops.py.html" id="targetframe" class="targetframe" style="border: none" ;>
+                            <iframe src="source_code/calculator_test_oops.py.html" id="targetframe" class="targetframe" style="border: none" >
                             </iframe>
                             <p> Running the above program using pylint shows the following errors. This is an pylint error of type W0621 (redefined-outer-name) and W0613 (unused-argument).</p>
                             <p> The clear_history function is declared as fixture here so that it has to be passed inorder to be used for teh calculation
@@ -197,37 +197,42 @@
 
         <div class="col-lg-4 mt-4">
             <!-- Search widget-->
-            <div class="card mb-4 mt-7 ">
+            <div class="card mb-4 mt-7 bg-grey ">
                 <h5 class="highlight header-colorize text-uppercase ">Table of contents</h5>
-                <div class="card-body  header-colorize text-center"><a href="internetelement2.html">AAA Pattern for python testing </a></div>
+                <p class="header-colorize " style="padding-left: 70px"><a href="#introduction">Introduction </a></p>
 
-                <div class="card-body header-colorize text-center"><a href="internetelement2.html">Pytest and Coverage </a></div>
-                <div class="card-body  header-colorize text-center"><a href="internetelement2.html">Continuous Integration</a></div>
+                <p class="header-colorize " style="padding-left: 70px"><a href="#installation">Pylint Installation</a></p>
+                <p class=" header-colorize " style="padding-left: 70px"><a href="#getting_started">Getting Started</a></p>
+                <p class=" header-colorize " style="padding-left: 70px"><a href="#tips">Best Practices and tips</a></p>
+                <p class=" header-colorize " style="padding-left: 70px"><a href="#testrun">Calculator Program using Pylint</a></p>
+
+
 
             </div>
             <div class="card mb-4 ">
                 <div class="card-header text-md-center text-center">Code Repositories for Hand On training</div>
                 <div class="card-body">
-                    <div class="row ">
+                    <div class="row " style="padding-left: 60px">
                         <!--                        <div class="col-md-6">-->
                         <!--                            <ul class="list-inline-item  mb-0">-->
-                        <p class="text-center"><a href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/">Simple Calculator Program with Unittest</a></p>
-                        <p class="text-center"><a href="https://pypi.org/project/flake8-aaa/">Improved Calculator Version with AAA</a></p>
-                        <p class="text-center"><a href="https://learnbyexample.gitbooks.io/python-basics/content/Testing.html">AAA testing with External data </a><p>
-                        <!--                        </div>-->
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/python_concepts">python_basic_concepts</a></p>
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/SOLID">Understanding SOLID principles</a></p>
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/branch1">AAA testing with External data</a></p>
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/calc_part2">OOPS concepts using Calculator Program</a></p>
+                        <p ><a href="  https://github.com/njitvjk/calc2/tree/calc_part3">Calculator Program with tuples</a></p>
+
                     </div>
                 </div>
             </div>
             <div class="card mb-4 ">
                 <div class="card-header text-md-center text-center">Online Resources</div>
                 <div class="card-body">
-                    <div class="row ">
-<!--                        <div class="col-md-6">-->
-                            <!--                            <ul class="list-inline-item  mb-0">-->
-                            <p class="text-center"><a href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/">Blog from Automation panda</a></p>
-                            <p class="text-center"><a href="https://pypi.org/project/flake8-aaa/">flake8-aaa</a></p>
-                            <p class="text-center"><a href="https://learnbyexample.gitbooks.io/python-basics/content/Testing.html">Testing Basics from GitBooks</a><p>
-<!--                        </div>-->
+                    <div class="row " style="padding-left: 80px">
+                        <!--                        <div class="col-md-6">-->
+                        <p ><a href="https://www.programiz.com/python-programming">Python for beginners</a></p>
+                        <p><a href="https://www.python.org/">Official Python Website</a></p>
+                        <p ><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Wikipedia-Python</a><p>
+                        <!--                        </div>-->
                     </div>
                 </div>
             </div>
@@ -246,7 +251,7 @@
         <div class="container">
             <p class="m-0 text-center text-white">Copyright &copy; Kowsalya_Vijayan 2021</p>
             <p class="m-0 text-center text-white">
-                <a href="https://github.com/njitvjk/internethistory_project" >Project Repo</a><span></span>
+                <a href="https://github.com/njitvjk/python_project" >Project Repo</a><span></span>
                 <a href="http://validator.w3.org/check/referer"><img src="https://www.w3.org/Icons/valid-html401-blue" alt=""></a></p>
 
         </div>

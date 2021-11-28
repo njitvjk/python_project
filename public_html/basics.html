@@ -38,6 +38,7 @@
                 <!--                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">HOME</a></li>-->
                 <li class="nav-item"><a class="nav-link" href="basics.html">PYTHON BASICS</a></li>
                 <li class="nav-item"><a class="nav-link" href="OOPS.html">OOPS</a></li>
+                <li class="nav-item"><a class="nav-link" href="pylint.html">PYLINT</a></li>
                 <li class="nav-item"><a class="nav-link" href="testing.html">TESTING</a></li>
                 <li class="nav-item"><a class="nav-link" href="SOLID.html">SOLID</a></li>
                 <li class="nav-item"><a class="nav-link" href="glossary.html">GLOSSARY</a></li>
@@ -65,9 +66,9 @@
                 <!-- Post header-->
                 <header class="mb-4">
                     <!-- Post title-->
-                    <h2 class="fw-bolder mb-1">Getting Started </h2>
+                    <h2 class="fw-bolder mb-1" id="getting_started">Getting Started </h2>
                     <!-- Post meta content-->
-                    <div class="text-muted fst-italic mb-2">Posted on November 23, 2021 by Now-U-Know. Image Credit:Kowsalya Vijayan</a></div>
+                    <div class="text-muted fst-italic mb-2">Posted on November 23, 2021 by Now-U-Know. Image Credit:Kowsalya Vijayan</div>
                     <!-- Post categories-->
                     <!--                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>-->
                     <!--                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>-->
@@ -93,7 +94,7 @@
                         <p>available in source or binary form for all major platforms from the web site, <a href ="https://www.python.org/">www.python.org</a></p>
                         <br>
                         <div class="row  ">
-                        <h6 class=text-muted><i>Keywords and Identifiers</i></h6>
+                        <h6 class=text-muted id="keyword"><i>Keywords and Identifiers</i></h6>
                         <p><i><b>Keywords</b></i> are the reserved words in Python.They cannot be used as variables or function or any other identifiers.In Python, keywords are case sensitive. </p>
 
 
@@ -106,7 +107,7 @@
                             </div>
                             <div></div>
                             <hr>
-                            <h6 class=text-muted><i>Variables</i></h6>
+                            <h6 class=text-muted id="variables"><i>Variables</i></h6>
                             <p>Variables are often described as boxes storing values. The variables can be labels to which a value has been assigned.</p>
 
 
@@ -129,7 +130,7 @@
                                 <p style="text-align:justify">The image shows the list of all keywords.In the example you can see that a variable</p>
 
 
-                                </p>                                <!--                            <p>IPv6 is the most recent version of the Internet Protocol. This new IP address version is being deployed to fulfil the need for more Internet addresses. It was aimed to resolve issues that are associated with IPv4. With 128-bit address space, it allows 340 undecillion unique address space. DNS and IPs are designed to scale.</p>-->
+                                                             <!--                            <p>IPv6 is the most recent version of the Internet Protocol. This new IP address version is being deployed to fulfil the need for more Internet addresses. It was aimed to resolve issues that are associated with IPv4. With 128-bit address space, it allows 340 undecillion unique address space. DNS and IPs are designed to scale.</p>-->
                             </div>
                             <p><i> message</i>
                             has been assigned with the value <i>Hello Python World</i> and the variable has been passed to print its value.</p>
@@ -141,18 +142,19 @@
 
                             <hr>
 
-                            <h6 class=text-muted><i>Strings</i></h6>
+                            <h6 class=text-muted id="strings"><i>Strings</i></h6>
                             <p>String is a series of characters.Anything inside quotes is considered a string in Python and you can use a single or double quotes around your string.</p>
                             <div class="col">
                             <img class="img-fluid rounded mb-2 " src="assets/basics/strings.JPG" alt="..." />
                             </div>
                             <div class="col-md-4">
 
-                                <p style="text-align:justify"> To insert a variable's value into a string,place the letter <i> f</i> immediately before the opening quotation mark.put the braces around the names or names of any varaibles.
+                                <p style="text-align:justify"> To insert a variable's value into a string,place the letter<i> f</i> immediately before the opening quotation mark.
+                                    Put the braces around the names or names of any
 
-                                    Python will replace each varable with its value when the </p>                               <!--                            <p>IPv6 is the most recent version of the Internet Protocol. This new IP address version is being deployed to fulfil the need for more Internet addresses. It was aimed to resolve issues that are associated with IPv4. With 128-bit address space, it allows 340 undecillion unique address space. DNS and IPs are designed to scale.</p>-->
+                                     </p>                               <!--                            <p>IPv6 is the most recent version of the Internet Protocol. This new IP address version is being deployed to fulfil the need for more Internet addresses. It was aimed to resolve issues that are associated with IPv4. With 128-bit address space, it allows 340 undecillion unique address space. DNS and IPs are designed to scale.</p>-->
                             </div>
-                            <p>string is displayed.These strings are called <i>f-strings.</i>
+                            <p>variable. Python will replace each variable with its value when the string is displayed.These strings are called <i>f-strings.</i>
 
                                 Use <i>/t</i> for a tab and <i>/n</i> for a space.<i>rstrip()</i> removes extra space at the end. <i>lsstrip()</i> removes the extra space on the left
 
@@ -162,7 +164,7 @@
                             <p> First line shows that the fist letter turns to be Capital letter upon using <i>title()</i>.second line shows  all texts are in <i>lower</i>.line 5-8 demonstrates the use of tab and space. Last ine shows that the whitespace has been stripped off.
                             <img class="img-fluid rounded mb-2 " src="assets/basics/string_output.JPG" alt="..." />
                         <hr>
-                            <h6 class=text-muted><i>Lists</i></h6>
+                            <h6 class=text-muted id="lists"><i>Lists</i></h6>
                             <p>List is a collection of items in a particular order.Lists are ordered collections, so that you can access any element in a alist by telling Python the position or <i>index</i> of the item desired.</p>
                             <div class="col">
                                 <img class="img-fluid rounded mb-2 " src="assets/basics/list.JPG" alt="..." />
@@ -180,7 +182,7 @@
                             <p>the first two output shows how the values are accessed depending on position. The third output shows that the item <i>daisy</i> has been modified with <i>lavendar</i>.The rest shows adding and removing elements.The last line shows teh length of the list</p>
                             <img class="img-fluid rounded mb-2 " src="assets/basics/list-output.JPG" alt="..." />
                             <hr>
-                            <h6 class=text-muted><i>Tuples</i></h6>
+                            <h6 class=text-muted id="tuples"><i>Tuples</i></h6>
                             <p>List work well for storing collections of items that can change. However, sometimes you will want to create a list of items that cannot change.Python refers to values that cannot change as <i>immutable</i>
                             and an immutable list is called <i>tuple</i></p>
 
@@ -198,7 +200,7 @@
 
                                         <img class="img-fluid rounded mb-2 " src="assets/basics/tuple_output.JPG" alt="..." />
                                     <hr>
-                            <h6 class=text-muted><i>Loops</i></h6>
+                            <h6 class=text-muted id="if-else"><i>Conditional statements</i></h6>
                             <p>Decision making is required when we want to execute a code only if a certain condition is satisfied.
 
                                 The <i>if…elif…else </i>statement is used in Python for decision making.</p>
@@ -229,7 +231,7 @@
                                 <p>The last two values passes through else hence only has been processed through <i>title()</i></p>
                                 <img class="img-fluid rounded mb-2 " src="assets/basics/condition_output.JPG" alt="..." />
                                  <hr>
-                            <h6 class=text-muted><i>For loop</i></h6>
+                            <h6 class=text-muted id="forloop"><i>For loop</i></h6>
                             <p>Iterating over a sequence of elements can be done using for loops.
 
                             <div class="col">
@@ -254,7 +256,7 @@
                             <p>Output:</p>
                             <img class="img-fluid rounded mb-2 " src="assets/basics/forloop_output.JPG" alt="..." />
                             <hr>
-                            <h6 class=text-muted><i>while loop</i></h6>
+                            <h6 class=text-muted id="whileloop"><i>while loop</i></h6>
                             <p>Loops are used in programming to repeat a specific block of code.Let's learn about while loop
 
                             <div class="col">
@@ -293,37 +295,44 @@
 
         <div class="col-lg-4 mt-4">
             <!-- Search widget-->
-            <div class="card mb-4 mt-7 ">
+            <div class="card mb-4 mt-7 bg-grey ">
                 <h5 class="highlight header-colorize text-uppercase ">Table of contents</h5>
-                <div class="card-body  header-colorize text-center"><a href="internetelement2.html">AAA Pattern for python testing </a></div>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#getting_started">Introduction </a></p>
 
-                <div class="card-body header-colorize text-center"><a href="internetelement2.html">Pytest and Coverage </a></div>
-                <div class="card-body  header-colorize text-center"><a href="internetelement2.html">Continuous Integration</a></div>
+                <p class="header-colorize " style="padding-left: 90px"><a href="#keyword">Keywords and Identifiers</a></p>
+                <p class=" header-colorize " style="padding-left: 90px"><a href="#variables">Variables</a></p>
+                <p class=" header-colorize " style="padding-left: 90px"><a href="#strings">Strings</a></p>
+                <p class=" header-colorize " style="padding-left: 90px"><a href="#lists">Lists</a></p>
+                <p class=" header-colorize " style="padding-left: 90px"><a href="#tuples">Tuples</a></p>
+                <p class=" header-colorize " style="padding-left: 90px"><a href="#if-else">Conditional Statements</a></p>
+                <p class=" header-colorize " style="padding-left: 90px"><a href="#forloop">For loop</a></p>
+                <p class=" header-colorize " style="padding-left: 90px"><a href="#whileloop">While loop</a></p>
+
 
             </div>
             <div class="card mb-4 ">
                 <div class="card-header text-md-center text-center">Code Repositories for Hand On training</div>
                 <div class="card-body">
-                    <div class="row ">
+                    <div class="row " style="padding-left: 60px">
                         <!--                        <div class="col-md-6">-->
                         <!--                            <ul class="list-inline-item  mb-0">-->
-                        <p class="text-center"><a href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/">Simple Calculator Program with Unittest</a></p>
-                        <p class="text-center"><a href="https://pypi.org/project/flake8-aaa/">Improved Calculator Version with AAA</a></p>
-                        <p class="text-center"><a href="https://learnbyexample.gitbooks.io/python-basics/content/Testing.html">AAA testing with External data </a><p>
-                        <!--                        </div>-->
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/python_concepts">python_basic_concepts</a></p>
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/SOLID">Understanding SOLID principles</a></p>
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/branch1">AAA testing with External data</a></p>
+                        <p ><a href="https://github.com/njitvjk/Project2_crashcource/tree/calc_part2">OOPS concepts using Calculator Program</a></p>
+                        <p ><a href="  https://github.com/njitvjk/calc2/tree/calc_part3">Calculator Program with tuples</a></p>
+
                     </div>
                 </div>
             </div>
             <div class="card mb-4 ">
                 <div class="card-header text-md-center text-center">Online Resources</div>
                 <div class="card-body">
-                    <div class="row ">
-<!--                        <div class="col-md-6">-->
-                            <!--                            <ul class="list-inline-item  mb-0">-->
-                            <p class="text-center"><a href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/">Blog from Automation panda</a></p>
-                            <p class="text-center"><a href="https://pypi.org/project/flake8-aaa/">flake8-aaa</a></p>
-                            <p class="text-center"><a href="https://learnbyexample.gitbooks.io/python-basics/content/Testing.html">Testing Basics from GitBooks</a><p>
-<!--                        </div>-->
+                    <div class="row " style="padding-left: 80px">
+                        <p ><a href="https://www.programiz.com/python-programming">Python for beginners</a></p>
+                        <p ><a href="https://www.python.org/">Official Python Website</a></p>
+                        <p ><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Wikipedia-Python</a><p>
+                        <!--                        </div>-->
                     </div>
                 </div>
             </div>
@@ -342,7 +351,7 @@
         <div class="container">
             <p class="m-0 text-center text-white">Copyright &copy; Kowsalya_Vijayan 2021</p>
             <p class="m-0 text-center text-white">
-                <a href="https://github.com/njitvjk/internethistory_project" >Project Repo</a><span></span>
+                <a href="https://github.com/njitvjk/python_project" >Project Repo</a><span></span>
                 <a href="http://validator.w3.org/check/referer"><img src="https://www.w3.org/Icons/valid-html401-blue" alt=""></a></p>
 
         </div>

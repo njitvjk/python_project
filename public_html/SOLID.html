@@ -38,6 +38,7 @@
                 <!--                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">HOME</a></li>-->
                 <li class="nav-item"><a class="nav-link" href="basics.html">PYTHON BASICS</a></li>
                 <li class="nav-item"><a class="nav-link" href="OOPS.html">OOPS</a></li>
+                <li class="nav-item"><a class="nav-link" href="pylint.html">PYLINT</a></li>
                 <li class="nav-item"><a class="nav-link" href="testing.html">TESTING</a></li>
                 <li class="nav-item"><a class="nav-link" href="SOLID.html">SOLID</a></li>
                 <li class="nav-item"><a class="nav-link" href="glossary.html">GLOSSARY</a></li>
@@ -49,7 +50,7 @@
 </nav>
 <!-- Hero section-->
 <div class="container bg-grey mt-2">
-    <h5 class="display-6 text-center ">Python supports multiple assignments in one statement</h5>
+    <h5 class="display-6 text-center" >Python supports multiple assignments in one statement</h5>
     <!--  <p class="lead"></p>-->
 </div>
 
@@ -65,9 +66,9 @@
                 <!-- Post header-->
                 <header class="mb-4">
                     <!-- Post title-->
-                    <h2 class="fw-bolder mb-1">SOLID Principles in Python </h2>
+                    <h2 class="fw-bolder mb-1" id ="getting_started" >SOLID Principles in Python </h2>
                     <!-- Post meta content-->
-                    <div class="text-muted fst-italic mb-2">Posted on November 23, 2021 by Now-U-Know. Image Credit:Kowsalya Vijayan</a></div>
+                    <div class="text-muted fst-italic mb-2">Posted on November 23, 2021 by Now-U-Know. Image Credit:Kowsalya Vijayan</div>
                     <!-- Post categories-->
                     <!--                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>-->
                     <!--                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>-->
@@ -92,7 +93,7 @@
                         </div>
                         <p>reduce their complexity.The image above shows the five concepts of the SOLID principles.</p>
                         <p>Let us demonstrate the principles using a calculator program</p>
-                        <h5 class=text-muted><i>Single Responsibility</i></h5>
+                        <h5 class="text-muted" id="single_responsibility"><i>Single Responsibility</i></h5>
                         <p> <i>"A class should do one thing and therefore it should have only a single reason to change"</i></p>
 
                         <ul style="padding-left:50px "><li><p><i>Testing</i>-A class with one responsibility will have fewer test cases.</p> </li>
@@ -103,18 +104,18 @@
                         </ul>
                         <p>In this code, illustrates the calculator program which can perform operations and store the results in history.However, this code violates the single responsibility principle. </p>
 
-                        <iframe src="source_code/Calculator_SOLID.py.html" class="targetframe" style="border: none" ;>
+                        <iframe src="source_code/Calculator_SOLID.py.html" class="targetframe" style="border: none" >
                         </iframe>
                         <p> to fix this let us move the all methods related to history to another class</p>
-                        <iframe src="source_code/calculator_history.py.html" class="targetframe" style="height:200px " ;>
+                        <iframe src="source_code/calculator_history.py.html" class="targetframe" style="height:200px " >
                         </iframe>
-                        <p>Awesome.Now we have relieved the <i>Calculator</i> class to perform only calculation and let <i>Calculator_history</i> take care of history.</i> </p>
+                        <p>Awesome.Now we have relieved the <i>Calculator</i> class to perform only calculation and let <i>Calculator_history</i> take care of history. </p>
 
-                        <h5 class=text-muted><i>Open for Extension and  closed for Modification </i></h5>
+                        <h5 class="text-muted" id="open_closed"><i>Open for Extension and  closed for Modification </i></h5>
                         <p><i>"classes should be open for extension but closed for modification. In doing so, we stop ourselves from modifying existing code and causing potential new bugs."</i></p>
                         <p>Now, let us explore the concept with the calculator.I used the program for some days and later on, I felt that I need a logger to check the issues.If I add the function into the Calculator Class it changes the logic which is violation.</p>
                         <p>To fix this, I implement a subclass <i>Calculator</i> which extends the <i>Calculator</i> and extends its functionality to implement logger.</p>
-                        <iframe src="source_code/calculator_logger.py.html" class="targetframe" style="height:200px " ;>
+                        <iframe src="source_code/calculator_logger.py.html" class="targetframe" style="height:200px ">
                         </iframe>
                         <p>Example shows how a addition operation has been captured in the log</p>
                         <p>Output</p>
@@ -124,45 +125,45 @@
                             <span class = "o">2021-11-27 11:30:03,203 [INFO] addition successful</span>
                         </div>
                         <p></p>
-                        <h5 class=text-muted><i>Liskov Substitution Principle(LSP)</i></h5>
+                        <h5 class="text-muted" id="LSP"><i>Liskov Substitution Principle(LSP)</i></h5>
                         <p><i>"If S is a subtype of T, then objects of type T in a program may be replaced with objects of type S without altering any of the desirable properties of that program."</i></p>
                             <p>if class A is a subtype of class B, we should be able to replace B with A without disrupting the behavior of our program.This principle aims to enforce consistency so that the parent Class or its child Class can be used in the same way without any errors.</p>
                             <p>When a child Class cannot perform the same actions as its parent Class, this can cause bugs.</p>
                             <p>The child Class should be able to process the same requests and deliver the same result as the parent Class or it could deliver a result that is of the same type.</p>
                             <p>If the child Class doesn’t meet these requirements, it means the child Class is changed completely and violates this principle.</p>
                             <p> Demonstration:</p>
-                        <iframe src="source_code/Calculator_addition.py.html" class="targetframe" style="height:450px " ;>
+                        <iframe src="source_code/Calculator_addition.py.html" class="targetframe" style="height:450px " >
                         </iframe>
                         <p>we are creating a subclass called <i>Calculator_Addition</i> to extend <i>Calculator</i>class. This class attempts to do addition with multiple numbers and another method to return float overriding the parent method which is a violation.In order to fix it,declare a new method.</p>
 
 
 
-                        <h5 class=text-muted><i>Interface Segregation </i></h5>
+                        <h5 class="text-muted" id="IS"><i>Interface Segregation </i></h5>
                         <p><i>"larger interfaces should be split into smaller ones. By doing so, we can ensure that implementing classes only need to be concerned about the methods that are of interest to them.in other words, A client should not depend on methods it does not use"</i></p>
                         <p> The calculator program can be used by different roles like students and general people. Students might also do trignometric functions where as general people will only need addition /subtraction/division or multiplication.Our program has all functionalities together and some unwanted functions for different actors.
 
                         This is violation of the principle. Not let us split the program into two one for student and other for general people</p>
 
 
-                        <iframe src="source_code/common_calculator.py.html" class="targetframe" style="height:400px" ;>
+                        <iframe src="source_code/common_calculator.py.html" class="targetframe" style="height:400px" >
                         </iframe>
                         <p>The school calculator extends basic methods <i> addition, division,subtraction,multiplication</i>  and have trigonometric methods extended from inbuilt Python Class </p>
-                        <iframe src="source_code/school_calculator.py.html" class="targetframe" style="height:200px" ;>
+                        <iframe src="source_code/school_calculator.py.html" class="targetframe" style="height:200px" >
                         </iframe>
                         <p></p>
-                        <h5 class=text-muted><i>Dependency Inversion</i></h5>
+                        <h5 class="text-muted" id="DI"><i>Dependency Inversion</i></h5>
                         <p><i>"The principle of dependency inversion refers to the decoupling of software modules. This way, instead of high-level modules depending on low-level modules, Both will depend on abstractions."</i></p>
                         <p> Now we have two Class <i>CommonCalculator</i> and a <i>SchoolCalculator</i>Both classes use abstraction for adding the result to history as per rule,in this way both will not be dependent on each other</p>
 
-                        <iframe src="source_code/calculator_history_abstract.py.html" class="targetframe" style="height:300px" ;>
+                        <iframe src="source_code/calculator_history_abstract.py.html" class="targetframe" style="height:300px" >
                         </iframe>
                         <p> The Common Calculator modified to implement the abstract method from history</p>
                        <div></div>
-                        <iframe src="source_code/common_calculator_modified.py.html" class="targetframe" style="height:400px" ;>
+                        <iframe src="source_code/common_calculator_modified.py.html" class="targetframe" style="height:400px" >
                         </iframe>
                         <div></div>
                         <p> The School Calculator modified to implement the abstract method from history</p>
-                        <iframe src="source_code/school_calculator_modified.py.html" class="targetframe" style="height:400px" ;>
+                        <iframe src="source_code/school_calculator_modified.py.html" class="targetframe" style="height:400px" >
                         </iframe>
                         <p> From the above example we have seen that we eliminated the dependency between two classes.</p>
                         <p></p>
@@ -182,38 +183,46 @@
 
         <div class="col-lg-4 mt-4">
             <!-- Search widget-->
-            <div class="card mb-4 mt-7 ">
+            <div class="card mb-4 mt-7 bg-grey ">
                 <h5 class="highlight header-colorize text-uppercase ">Table of contents</h5>
-                <div class="card-body  header-colorize text-center"><a href="internetelement2.html">AAA Pattern for python testing </a></div>
+                <div class="card-body  header-colorize " style="padding-left: 70px"><a href="#getting_started">Introduction </a></div>
 
-                <div class="card-body header-colorize text-center"><a href="internetelement2.html">Pytest and Coverage </a></div>
-                <div class="card-body  header-colorize text-center"><a href="internetelement2.html">Continuous Integration</a></div>
+                <div class="card-body header-colorize " style="padding-left: 70px"><a href="#single_responsibility">Single Responsibility Principle</a></div>
+                <div class="card-body  header-colorize " style="padding-left: 70px"><a href="#open_closed">Open-Closed Principle</a></div>
+                <div class="card-body  header-colorize " style="padding-left: 70px"><a href="#LSP">Liskov Substitution Principle</a></div>
+                <div class="card-body  header-colorize " style="padding-left: 70px"><a href="#IS">Interface Segregation Principle</a></div>
+                <div class="card-body  header-colorize " style="padding-left: 70px"><a href="#DI">Dependency Inversion Principle</a></div>
 
             </div>
             <div class="card mb-4 ">
                 <div class="card-header text-md-center text-center">Code Repositories for Hand On training</div>
                 <div class="card-body">
-                    <div class="row ">
+                    <div class="row " >
                         <!--                        <div class="col-md-6">-->
                         <!--                            <ul class="list-inline-item  mb-0">-->
-                        <p class="text-center"><a href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/">Simple Calculator Program with Unittest</a></p>
-                        <p class="text-center"><a href="https://pypi.org/project/flake8-aaa/">Improved Calculator Version with AAA</a></p>
-                        <p class="text-center"><a href="https://learnbyexample.gitbooks.io/python-basics/content/Testing.html">AAA testing with External data </a><p>
-                        <!--                        </div>-->
+                        <p style="padding-left: 70px "><a href="https://github.com/njitvjk/Project2_crashcource/tree/python_concepts">python_basic_concepts</a></p>
+                        <p style="padding-left: 70px"><a href="https://github.com/njitvjk/Project2_crashcource/tree/SOLID">Understanding SOLID principles</a></p>
+                        <p style="padding-left: 70px"><a href="https://github.com/njitvjk/Project2_crashcource/tree/branch1">AAA testing with External data</a></p>
+                        <p style="padding-left: 70px"><a href="https://github.com/njitvjk/Project2_crashcource/tree/calc_part2">OOPS concepts using Calculator Program</a></p>
+                        <p style="padding-left: 70px"><a href="https://github.com/njitvjk/calc2/tree/calc_part3">Calculator Program with tuples</a></p>
+
                     </div>
                 </div>
             </div>
             <div class="card mb-4 ">
                 <div class="card-header text-md-center text-center">Online Resources</div>
                 <div class="card-body">
-                    <div class="row ">
+                    <div class="row " style="padding-left: 80px">
+
 <!--                        <div class="col-md-6">-->
                             <!--                            <ul class="list-inline-item  mb-0">-->
-                            <p class="text-center"><a href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/">Blog from Automation panda</a></p>
-                            <p class="text-center"><a href="https://pypi.org/project/flake8-aaa/">flake8-aaa</a></p>
-                            <p class="text-center"><a href="https://learnbyexample.gitbooks.io/python-basics/content/Testing.html">Testing Basics from GitBooks</a><p>
-<!--                        </div>-->
-                    </div>
+
+                        <p ><a href="https://www.programiz.com/python-programming">Python for beginners</a></p>
+                        <p ><a href="https://www.python.org/">Official Python Website</a></p>
+                        <p ><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Wikipedia-Python</a><p>
+                        <!--                        </div>-->
+                        </p>
+
                 </div>
             </div>
             <!-- Categories widget-->
@@ -223,7 +232,7 @@
         </div>
     </div>
 </div>
-
+</div>
 <!-- section End -->
 
 <!-- Footer-->
@@ -231,7 +240,7 @@
         <div class="container">
             <p class="m-0 text-center text-white">Copyright &copy; Kowsalya_Vijayan 2021</p>
             <p class="m-0 text-center text-white">
-                <a href="https://github.com/njitvjk/internethistory_project" >Project Repo</a><span></span>
+                <a href="https://github.com/njitvjk/python_project" >Project Repo</a><span></span>
                 <a href="http://validator.w3.org/check/referer"><img src="https://www.w3.org/Icons/valid-html401-blue" alt=""></a></p>
 
         </div>
